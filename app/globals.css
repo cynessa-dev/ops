@@ -47,3 +47,7 @@ body {
   color: var(--foreground);
   font-family: Arial, Helvetica, sans-serif;
 }
+
+.delivery-table th, td {
+  @apply border border-(--border) px-2;
+}

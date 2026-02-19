@@ -1,8 +1,12 @@
+import Button from "./button";
+
 export default function Navigation() {
   return (
-    <nav className="absolute top-0 left-0 right-0 flex items-center justify-between px-6 bg-(--card)">
+    <nav className="absolute top-0 left-0 right-0 flex justify-between items-center px-6 bg-(--card)">
       {/* COMPANY LOGO */}
-      <h1 className="text-2xl font-bold">Ops</h1>
+      <div className="flex items-center">
+        <Button text="Company Logo" destination="/" />
+      </div>
 
       {/* MENU OPTIONS */}
       <ul className="flex gap-4">

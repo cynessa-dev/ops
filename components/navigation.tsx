@@ -6,10 +6,10 @@ export default function Navigation() {
 
       {/* MENU OPTIONS */}
       <ul className="flex gap-4">
-        <li className="py-2 px-4 rounded hover:bg-zinc-800">Documentation</li>
-        <li className="py-2 px-4 rounded hover:bg-zinc-800">About Us</li>
-        <li className="py-2 px-4 rounded hover:bg-zinc-800">Contact Us</li>
-        <li className="py-2 px-4 rounded hover:bg-zinc-800">Get Started</li>
+        <li className="py-2 px-4 rounded cursor-pointer hover:bg-foreground/10">Documentation</li>
+        <li className="py-2 px-4 rounded cursor-pointer hover:bg-foreground/10">About Us</li>
+        <li className="py-2 px-4 rounded cursor-pointer hover:bg-foreground/10">Contact Us</li>
+        <li className="py-2 px-4 rounded cursor-pointer hover:bg-foreground/10">Get Started</li>
       </ul>
     </nav>
   );

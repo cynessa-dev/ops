@@ -48,6 +48,15 @@ body {
   font-family: Arial, Helvetica, sans-serif;
 }
 
-.delivery-table th, td {
-  @apply border border-(--border) px-2;
+.delivery-table th, .delivery-table td {
+  @apply border border-(--border) px-3 py-2;
+}
+
+input[type="number"] {
+  -moz-appearance: textfield;
+}
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
 }

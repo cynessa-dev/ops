@@ -56,9 +56,9 @@ export default function DeliveryTable() {
     }, []);
 
     return (
-        <div>
+        <div className="w-full md:w-1/2">
             <form action="#" method="post">
-                <table className="border border-(--border) border-collapse">
+                <table className="delivery-table border border-(--border) border-collapse rounded-t">
                     <thead>
                         <tr>
                             <th>QTY</th>
@@ -74,17 +74,19 @@ export default function DeliveryTable() {
                                     <input 
                                         type="number"
                                         value={item.quantity}
+                                        min={0}
+                                        max={9999}
                                         onChange={e =>
                                             updateQuantity(index, parseInt(e.target.value, 10) || 0)
                                         }
-                                        className="w-12 text-center"
+                                        className="w-full bg-background text-center rounded focus:outline-none"
                                     />
                                 </td>
                                 <td>
                                     <select 
                                         value={item.unit} 
                                         onChange={e => updateUnit(index, e.target.value)}
-                                        className="w-24 text-center"
+                                        className="w-full bg-background text-center rounded focus:outline-none"
                                     >
                                         <option value="">Select unit</option>
                                         <option value="pcs">pcs</option>
@@ -99,6 +101,7 @@ export default function DeliveryTable() {
                                         onChange={e => {
                                             updateDescription(index, e.target.value);
                                         }}
+                                        className="w-full focus:outline-none"
                                     />
                                 </td>
                                 <td>
@@ -108,13 +111,14 @@ export default function DeliveryTable() {
                                         onChange={e => {
                                             updateRemarks(index, e.target.value);
                                         }}
+                                        className="w-full"
                                     />
                                 </td>
                             </tr>
                         ))}
                     </tbody>
                 </table>
-                <button type="button" className="mt-4 px-4 py-2 bg-(--primary-action) font-bold rounded cursor-pointer hover:bg-(--primary-hover)" onClick={ addItem }>
+                <button type="button" className="px-4 py-2 w-full bg-(--primary-action) font-bold rounded-b cursor-pointer hover:bg-(--primary-hover)" onClick={ addItem }>
                     +
                 </button>
             </form>

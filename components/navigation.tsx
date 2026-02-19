@@ -1,6 +1,6 @@
 export default function Navigation() {
   return (
-    <nav className="flex items-center justify-between py-4 px-6">
+    <nav className="flex items-center justify-between py-4 px-6 bg-(--card)">
       {/* COMPANY LOGO */}
       <h1 className="text-2xl font-bold">Ops</h1>
 

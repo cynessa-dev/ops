@@ -7,13 +7,13 @@
   --primary-hover: oklch(62.678% 0.18299 263.561);
 
   /* NEUTRAL COLORS */
-  --background: oklch(92.191% 0.0001 271.152);
-  --foreground: oklch(26.862% 0.00003 271.152);
-  --card: oklch(96.115% 0.00011 271.152);
-  --border: oklch(84.522% 0.0001 271.152);
-  --heading: oklch(21.779% 0.00002 271.152);
-  --secondary: oklch(68.295% 0.00008 271.152);
-  --muted: oklch(76.676% 0.00009 271.152);
+  --background: oklch(90.0% 0.0 0.0);
+  --foreground: oklch(25.0% 0.0 0.0);
+  --card: oklch(95.0% 0.0 0.0);
+  --border: oklch(85.0% 0.0 0.0);
+  --heading: oklch(20.0% 0.0 0.0);
+  --secondary: oklch(80.0% 0.0 0.0);
+  --muted: oklch(75.0% 0.0 0.0);
 
   /* SEMANTIC COLORS */
   --success: oklch(62.706% 0.1699 149.234);
@@ -31,8 +31,14 @@
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+    /* NEUTRAL COLORS */
+    --background: oklch(10.0% 0.0 0.0);
+    --foreground: oklch(90.0% 0.0 0.0);
+    --card: oklch(20.0% 0.0 0.0);
+    --border: oklch(15.0% 0.0 0.0);
+    --heading: oklch(95.0% 0.0 0.0);
+    --secondary: oklch(85.0% 0.0 0.0);
+    --muted: oklch(75.0% 0.0 0.0);
   }
 }
 

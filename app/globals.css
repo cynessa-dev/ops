@@ -2,24 +2,24 @@
 
 :root {
   /* PRIMARY COLORS */
-  --primary-bg: oklch(37.907% 0.13782 265.536);
-  --primary-action: oklch(54.616% 0.21529 262.896);
-  --primary-hover: oklch(62.678% 0.18299 263.561);
+  --primary-bg: oklch(55.0% 0.18 260.0);
+  --primary-action: oklch(45.0% 0.147 260.0);
+  --primary-hover: oklch(60.0% 0.18 270.0);
 
   /* NEUTRAL COLORS */
-  --background: oklch(90.0% 0.0 0.0);
-  --foreground: oklch(25.0% 0.0 0.0);
+  --background: oklch(92.0% 0.0 0.0);
+  --foreground: oklch(30.0% 0.0 0.0);
   --card: oklch(95.0% 0.0 0.0);
-  --border: oklch(80.0% 0.0 0.0);
-  --heading: oklch(20.0% 0.0 0.0);
+  --border: oklch(85.0% 0.0 0.0);
+  --heading: oklch(25.0% 0.0 0.0);
   --secondary: oklch(75.0% 0.0 0.0);
-  --muted: oklch(60.0% 0.0 0.0);
+  --muted: oklch(80.0% 0.0 0.0);
 
   /* SEMANTIC COLORS */
-  --success: oklch(62.706% 0.1699 149.234);
-  --warning: oklch(76.858% 0.1646 70.075);
-  --danger: oklch(57.707% 0.21516 27.312);
-  --info: oklch(68.47% 0.14794 237.348);
+  --success: oklch(65.0% 0.166 150.0);
+  --warning: oklch(75.0% 0.162 70.0);
+  --danger: oklch(60.0% 0.22 30.0);
+  --info: oklch(70.0% 0.15 250.0);
 }
 
 @theme inline {

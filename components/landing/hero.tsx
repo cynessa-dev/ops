@@ -2,13 +2,13 @@ import Button from "@/components/button";
 
 export default function Hero() {
     return (
-        <section className="flex flex-col justify-center items-center min-w-full min-h-screen">
-            <div id="header" className="flex flex-col gap-4 w-4/5 text-center">
-                <h1 className="text-(--heading) text-[5rem] font-bold leading-tight tracking-tight">Operate with Ease</h1>
-                <h2 className="text-(--secondary) text-[1.25rem]">Simplify your operations with our intuitive platform.</h2>
+        <section className="min-w-full min-h-screen pt-32">
+            <div id="header" className="flex flex-col gap-4 w-4/5 select-none">
+                <h1 className="text-(--heading) text-[4rem] md:text-[5rem] xl:text-[6rem] font-black tracking-[-0.1rem]">OPERATE WITH EASE</h1>
+                <p className="text-(--secondary) text-[2rem] leading-8 tracking-[0.1rem]">Work, collaborate, and communicate <br /> with the right tools, all in one place!</p>
             </div>
             <div id="actions" className="mt-16 w-1/5 flex gap-4">
-                <Button text="Get Started" variant="primary" destination="/portal" />
+                <button className="bg-(--primary-action) text-background px-6 py-3 rounded-full font-bold cursor-pointer hover:bg-(--primary-hover)">LET'S GET STARTED</button>
             </div>
         </section>
     );

@@ -5,7 +5,7 @@ import { useSignUp } from "@/lib/hooks/useSignUp";
 import InputField from "@/components/inputField";
 import Navigation from "@/components/navigation";
 
-export default function Portal() {
+export default function Signup() {
     const {
         email,
         setEmail,

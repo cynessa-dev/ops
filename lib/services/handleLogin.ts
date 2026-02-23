@@ -1,0 +1,14 @@
+import { supabase } from "@/lib/database/supabase";
+
+export async function handleLogin(email: string, password: string) {
+    const { data, error } = await supabase.auth.signInWithPassword({
+        email,
+        password,
+    });
+
+    if (error) {
+        return { error: error.message };
+    } else {
+        return { message: "Login successful! Redirecting..." };
+    }
+}

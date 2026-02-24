@@ -1,5 +1,7 @@
 import Image from "next/image";
 
+import Button from "@/components/button";
+
 export default function Hero() {
     return (
         <section className="min-w-full min-h-screen px-6 pt-32">
@@ -8,7 +10,7 @@ export default function Hero() {
                 <p className="text-(--secondary) text-[2rem] leading-8 tracking-[0.1rem]">Work, collaborate, and communicate <br /> with the right tools — all in one place!</p>
             </div>
             <div id="actions" className="mt-16 w-1/5 flex gap-4">
-                <button className="bg-(--primary-action) text-background px-6 py-3 rounded-full font-bold cursor-pointer hover:bg-(--primary-hover)">LET'S GET STARTED</button>
+                <Button text="LET'S GET STARTED" variant="primary" size="lg" destination="/portal/signup" />
             </div>
             {/* SCROLL DOWN */}
             <div className=" absolute bottom-8 left-1/2 transform -translate-x-1/2 flex flex-col justify-center items-center cursor-pointer animate-bounce">

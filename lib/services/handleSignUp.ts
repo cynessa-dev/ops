@@ -1,5 +1,10 @@
 import { supabase } from "@/lib/database/supabase";
-import { validatePassword } from "@/lib/validator/validatePassword";
+import { 
+    validatePasswordLength, 
+    validatePassword, 
+    validateConfirmPassword,
+    validateWhitespace
+} from "@/lib/validator/validatePassword";
 
 type SignUpResponse = {
     message?: string;
@@ -12,8 +17,20 @@ export async function handleSignUp(
     confirmPassword: string
 ): Promise<SignUpResponse> {
     // Validate the password to avoid weak passwords and mismatched confirm password
+    if (!validateWhitespace(password)) {
+        return { error: "Password must not contain whitespace" };
+    }
+    
+    if (!validatePasswordLength(password)) {
+        return { error: "Password must be at least 8 characters long" };
+    }
+    
     if (!validatePassword(password, confirmPassword)) {
-        return { error: "Password must be at least 8 characters long and contain at least one uppercase letter, one lowercase letter, and one number." };
+        return { error: "Password must contain at least one digit" };
+    }
+
+    if (!validateConfirmPassword(password, confirmPassword)) {
+        return { error: "Passwords do not match" };
     }
     
     // Call Supabase to verify sign up process

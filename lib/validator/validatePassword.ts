@@ -1,18 +1,18 @@
 export function validatePassword(password: string, confirmPassword: string): boolean {
-    // Password must be at least 8 characters long and contain at least one uppercase letter, one lowercase letter, and one number
-    const passwordRegex = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)[a-zA-Z\d]{8,}$/;
+    // Password must be at least 8 characters long and contain at least one uppercase letter, one lowercase letter
+    const passwordRegex = /^(?=.*\d).{8,}$/;
     
-    if (!passwordRegex.test(password)) {
-        return false;
-    }
+    return passwordRegex.test(password);
+}
 
-    if (password !== confirmPassword) {
-        return false;
-    }
+export function validateConfirmPassword(password: string, confirmPassword: string): boolean {
+    return password === confirmPassword;
+}
 
-    if (password.length < 8) {
-        return false;
-    }
+export function validatePasswordLength(password: string): boolean {
+    return password.length >= 8;
+}
 
-    return true;
+export function validateWhitespace(password: string): boolean {
+    return !/\s/.test(password);
 }

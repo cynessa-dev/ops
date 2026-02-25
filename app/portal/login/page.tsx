@@ -1,6 +1,7 @@
 'use client';
 
 import { useLogin } from "@/lib/hooks/useLogin";
+import { useNavigation } from "@/lib/hooks/useNavigation";
 
 import InputField from "@/components/inputField";
 import Navigation from "@/components/navigation";
@@ -15,6 +16,14 @@ export default function Login() {
         error,
         submit,
     } = useLogin();
+    const { goToManager } = useNavigation();
+
+    const login = async (e: React.SyntheticEvent) => {        e.preventDefault();
+        const success = await submit(e);
+        if (success) {
+            goToManager();
+        }
+    }
 
     return (
         <main className="flex justify-center items-center min-w-screen min-h-screen">
@@ -51,7 +60,7 @@ export default function Login() {
                         
                         {/* SUBMIT */}
                         <div className="pt-4">
-                            <button className="w-full py-2 px-4 bg-(--primary-action) text-foreground font-bold rounded cursor-pointer hover:bg-(--primary-hover)" onClick={submit}>Let's get started!</button>
+                            <button className="w-full py-2 px-4 bg-(--primary-action) text-foreground font-bold rounded cursor-pointer hover:bg-(--primary-hover)" onClick={login}>Let's get started!</button>
                         </div>
                     </form>
                 </div>

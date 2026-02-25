@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { handleLogin } from "../services/handleLogin";
+import { handleLogin } from "@/lib/services/handleLogin";
 
 export function useLogin() {
     // User Crednetials
@@ -22,11 +22,15 @@ export function useLogin() {
 
         if (error) {
             setError(error);
-        } else {
-            // successful login – make sure the error state is clear
-            setError(null);
-            setMessage(message ?? null);
+
+            return false;
         }
+
+        // successful login: make sure the error state is clear
+        setError(null);
+        setMessage(message ?? null);
+
+         return true;
     };
 
     return {

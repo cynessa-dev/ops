@@ -38,9 +38,9 @@ const Button = forwardRef<HTMLButtonElement, ButtonProps>(
             "inline-flex items-center justify-center font-bold rounded cursor-pointer focus:outline-none focus:ring-1 focus:ring-offset-1 transition-colors disabled:opacity-50 disabled:cursor-not-allowed";
 
         const variantStyles: Record<string, string> = {
-            primary: "bg-(--primary-action) text-foreground hover:bg-(--primary-hover) focus:ring-(--primary-bg)",
-            secondary: "bg-(--secondary) text-foreground hover:bg-secondary-dark focus:ring-secondary",
-            tertiary: "bg-transparent text-foreground hover:bg-primary-light focus:ring-primary",
+            primary: "bg-(--primary-action) text-foreground dark:text-background hover:bg-(--primary-hover) focus:ring-(--primary-bg)",
+            secondary: "bg-(--secondary) text-foreground dark:text-background hover:bg-secondary-dark focus:ring-secondary",
+            tertiary: "bg-transparent text-foreground dark:text-background hover:bg-primary-light focus:ring-primary",
         };
 
         const sizeStyles: Record<string, string> = {

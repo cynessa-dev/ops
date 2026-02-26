@@ -1,4 +1,4 @@
-import { supabase } from "@/lib/database/supabase";
+import { supabase } from "@/lib/supabase/client";
 
 export async function handleSetup(firstName: string, lastName: string, role: string) {
     // Get the current user to determine which profile to update

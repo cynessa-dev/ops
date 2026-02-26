@@ -25,7 +25,7 @@ export default function Signup() {
             <div className="flex px-4 py-6 flex-col gap-6 w-2/5 bg-(--card) border border-(--border) rounded">
                 <div>
                     <h1 className="text-(--heading) text-[1.5rem] font-bold">Sign Up</h1>
-                    <p className="text-(--secondary) text-[1.25rem) font-light">Let's get you setup!</p>
+                    <p className="text-(--secondary) text-[1.0rem] font-light">Let's get you setup!</p>
                 </div>
                 <div>
                     <form method="post">

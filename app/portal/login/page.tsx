@@ -64,7 +64,7 @@ export default function Login() {
                                 className="w-full py-2 px-4 bg-(--primary-action) text-foreground font-bold rounded cursor-pointer hover:bg-(--primary-hover)" 
                                 onClick={handleLogin}
                             >
-                                Let's get started!
+                                Let&apos;s get started!
                             </button>
                         </div>
                     </form>

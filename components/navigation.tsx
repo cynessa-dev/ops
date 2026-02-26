@@ -1,5 +1,3 @@
-import Button from "./button";
-
 export default function Navigation() {
   return (
     <nav className="absolute top-0 left-0 right-0 flex justify-between items-center px-6 pt-4 lg:pt-6 xl:pt-16">

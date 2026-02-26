@@ -1,4 +1,4 @@
-export function validatePassword(password: string, confirmPassword: string): boolean {
+export function validatePassword(password: string): boolean {
     // Password must be at least 8 characters long and contain at least one uppercase letter, one lowercase letter
     const passwordRegex = /^(?=.*\d).{8,}$/;
     

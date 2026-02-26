@@ -1,6 +1,6 @@
 'use client';
 
-import { useState, useEffect } from "react";
+import { useState } from "react";
 
 interface DeliveryItem {
     quantity: number;
@@ -51,9 +51,10 @@ export default function DeliveryTable() {
         setItems(updatedItems); // Update the state with the modified items array
     }
 
-    useEffect(() => {
-        addItem(); // Add an initial item when the component mounts
-    }, []);
+    useState(() => {
+        // Initialize with one empty item
+        addItem();
+    });
 
     return (
         <div className="w-full md:w-1/2">

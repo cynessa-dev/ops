@@ -9,7 +9,6 @@ export function useLogin() {
     // Feedback State
     const [message, setMessage] = useState<string | null>(null);
     const [error, setError] = useState<string | null>(null);
-    const [loading, setLoading] = useState(false);
 
     const submit = async (e: React.SyntheticEvent) => {
         e.preventDefault(); // Prevent form from refreshing the page

@@ -25,7 +25,7 @@ export async function handleSignUp(
         return { error: "Password must be at least 8 characters long" };
     }
     
-    if (!validatePassword(password, confirmPassword)) {
+    if (!validatePassword(password)) {
         return { error: "Password must contain at least one digit" };
     }
 
@@ -34,7 +34,7 @@ export async function handleSignUp(
     }
     
     // Call Supabase to verify sign up process
-    const { data, error } = await supabase.auth.signUp({
+    const { error } = await supabase.auth.signUp({
         email,
         password,
     });

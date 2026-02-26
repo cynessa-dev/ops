@@ -11,14 +11,10 @@ export function useSignUp() {
     // Message to display for the user
     const [message, setMessage] = useState<string | null>(null);
     const [error, setError] = useState<string | null>(null);
-    const [loading, setLoading] = useState(false);
 
     const submit = useCallback(
         async (e?: React.SyntheticEvent) => {
             e?.preventDefault(); // Prevent form from refreshing the page
-            
-            // Set loading to true to indicate the process has started
-            setLoading(true);
 
             // Reset messages
             setMessage(null);

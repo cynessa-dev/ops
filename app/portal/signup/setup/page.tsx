@@ -28,7 +28,7 @@ export default function Setup() {
             <div className="flex px-4 py-6 flex-col gap-6 w-2/5 bg-(--card) border border-(--border) rounded">
                 <div>
                     <h1 className="text-(--heading) text-[1.5rem] font-bold">Introduce Yourself!</h1>
-                    <p className="text-(--secondary) text-[1.0rem] font-light">Let's get to know more about you.</p>
+                    <p className="text-(--secondary) text-[1.0rem] font-light">Let&apos;s get to know more about you.</p>
                 </div>
                 <div>
                     <form method="post">
@@ -62,7 +62,7 @@ export default function Setup() {
                         {/* SUBMIT */}
                         <button 
                             className="w-full mt-6 bg-(--primary-action) text-foreground py-2 rounded cursor-pointer hover:bg-(--primary-hover) transition-colors"
-                            onClick={submit}
+                            onClick={handleSubmit}
                         >
                             Continue
                         </button>

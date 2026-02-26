@@ -10,109 +10,33 @@ export type Database = {
   // Allows to automatically instantiate createClient with right options
   // instead of createClient<Database, { PostgrestVersion: 'XX' }>(URL, KEY)
   __InternalSupabase: {
-    PostgrestVersion: "14.1"
+    PostgrestVersion: "14.4"
   }
   public: {
     Tables: {
-      account: {
+      profiles: {
         Row: {
           created_at: string
-          email: string
-          id: number
-          password: string
+          first_name: string | null
+          id: string
+          last_name: string | null
+          role: string | null
         }
         Insert: {
           created_at?: string
-          email: string
-          id?: number
-          password: string
+          first_name?: string | null
+          id?: string
+          last_name?: string | null
+          role?: string | null
         }
         Update: {
           created_at?: string
-          email?: string
-          id?: number
-          password?: string
+          first_name?: string | null
+          id?: string
+          last_name?: string | null
+          role?: string | null
         }
         Relationships: []
-      }
-      delivery_receipt: {
-        Row: {
-          collection: string
-          created_at: string
-          id: number
-          item: string
-          quantity: number
-          remark: string | null
-          style: string
-          unit: string
-          user_id: number
-        }
-        Insert: {
-          collection: string
-          created_at?: string
-          id?: number
-          item: string
-          quantity: number
-          remark?: string | null
-          style: string
-          unit: string
-          user_id: number
-        }
-        Update: {
-          collection?: string
-          created_at?: string
-          id?: number
-          item?: string
-          quantity?: number
-          remark?: string | null
-          style?: string
-          unit?: string
-          user_id?: number
-        }
-        Relationships: [
-          {
-            foreignKeyName: "delivery_receipt_user_id_fkey"
-            columns: ["user_id"]
-            isOneToOne: false
-            referencedRelation: "user"
-            referencedColumns: ["id"]
-          },
-        ]
-      }
-      user: {
-        Row: {
-          account_id: number
-          created_at: string
-          first_name: string
-          id: number
-          last_name: string
-          type: string
-        }
-        Insert: {
-          account_id: number
-          created_at?: string
-          first_name: string
-          id?: number
-          last_name: string
-          type: string
-        }
-        Update: {
-          account_id?: number
-          created_at?: string
-          first_name?: string
-          id?: number
-          last_name?: string
-          type?: string
-        }
-        Relationships: [
-          {
-            foreignKeyName: "user_account_id_fkey"
-            columns: ["account_id"]
-            isOneToOne: true
-            referencedRelation: "account"
-            referencedColumns: ["id"]
-          },
-        ]
       }
     }
     Views: {

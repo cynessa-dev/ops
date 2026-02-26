@@ -34,19 +34,19 @@ export async function middleware(request: NextRequest) {
         data: { user },
     } = await supabase.auth.getUser();
 
-    const protectedRoutes = ["/dashboard", "/profile"];
+    const protectedRoutes = ["/manager"];
 
     const isProtected = protectedRoutes.some((route) => 
         request.nextUrl.pathname.startsWith(route)
     );
 
     if (isProtected && !user) {
-        return NextResponse.redirect(new URL("/login", request.url));
+        return NextResponse.redirect(new URL("/portal/login", request.url));
     }
 
     return response;
 }
 
 export const config = {
-    matcher: ["/dashboard/:path*", "/profile/:path*"],
+    matcher: ["/manager/:path*"],
 };

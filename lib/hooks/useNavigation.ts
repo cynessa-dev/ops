@@ -4,6 +4,7 @@ export function useNavigation() {
     const router = useRouter();
 
     return {
-        goToManager: () => router.push("/manager"),
+        goToClient: () => router.push("/dashboard/client"),
+        goToContractor: () => router.push("/dashboard/contractor"),
     }
 }

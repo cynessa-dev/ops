@@ -16,12 +16,12 @@ export default function Login() {
         error,
         submit,
     } = useLogin();
-    const { goToManager } = useNavigation();
+    const { goToContractor } = useNavigation();
 
     const handleLogin = async (e: React.SyntheticEvent) => {        e.preventDefault();
         const success = await submit(e);
         if (success) {
-            goToManager();
+            goToContractor();
         }
     }
 

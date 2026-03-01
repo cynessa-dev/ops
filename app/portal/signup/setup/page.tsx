@@ -14,12 +14,12 @@ export default function Setup() {
         setRole, 
         submit 
     } = useSetup();
-    const { goToManager } = useNavigation();
+    const { goToContractor } = useNavigation();
 
     const handleSubmit = async (e: React.SyntheticEvent) => {
         const success = await submit(e);
         if (success) {
-            goToManager();
+            goToContractor();
         }
     };
 

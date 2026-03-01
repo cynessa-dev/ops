@@ -3,14 +3,14 @@ import { NextResponse } from "next/server";
 import type { NextRequest } from "next/server";
 
 const supabaseUrl = process.env.NEXT_PUBLIC_SUPABASE_URL!;
-const supabaseAnonKey = process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY!;
+const supabasePublishableKey = process.env.NEXT_PUBLIC_SUPABASE_PUBLISHABLE_KEY!;
 
 export async function proxy(request: NextRequest) {
     let response = NextResponse.next();
 
     const supabase = createServerClient(
         supabaseUrl,
-        supabaseAnonKey,
+        supabasePublishableKey,
         {
             cookies: {
                 get(name) {
@@ -34,7 +34,7 @@ export async function proxy(request: NextRequest) {
         data: { user },
     } = await supabase.auth.getUser();
 
-    const protectedRoutes = ["/manager"];
+    const protectedRoutes = ["/dashboard"];
 
     const isProtected = protectedRoutes.some((route) => 
         request.nextUrl.pathname.startsWith(route)
@@ -48,5 +48,5 @@ export async function proxy(request: NextRequest) {
 }
 
 export const config = {
-    matcher: ["/manager/:path*"],
+    matcher: ["/dashboard/:path*"],
 };

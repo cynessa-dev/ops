@@ -1,36 +1,26 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
 
-## Getting Started
+# README
 
-First, run the development server:
+## Hello, World
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+Hi! Christian, here. Thank you for taking an interest in this project, this is a request by my dear father to help him in ease his daily operations with his tailoring business. I figured this will be a good way to practice and gain some new knowledge!
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## Project: Ops
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+This project is part of my hobbies, rather than an actual service. Well, maybe I could turn it into something in the near future, but this will be categorized as one of the Prototype: 2026.
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+In the very core, this Software as a Service (SaaS) will offer ways to easily record goods that are flowing in and out of a company, mainly through a specialized and customizable form. What makes this different out of the other options is, it will be centralized, organized, and efficient! Later on, we can implement a receipt generator, role-based collaboration, and many more. Right now, the project will slowly move its way up the ladder.
 
-## Learn More
+## Tech Stack
 
-To learn more about Next.js, take a look at the following resources:
+The following are the technologies used in this project:
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+- Next.js
+- Tailwind CSS
+- Supabase
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+Getting into more details, this project uses the following sub-technologies:
 
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+- React
+- Typescript
+- GitHub Actions

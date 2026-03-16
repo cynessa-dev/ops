@@ -1,25 +1,35 @@
 @import "tailwindcss";
 
 :root {
-  /* PRIMARY COLORS */
-  --primary-bg: oklch(55.0% 0.18 260.0);
-  --primary-action: oklch(45.0% 0.147 260.0);
-  --primary-hover: oklch(60.0% 0.18 270.0);
+  /* PRIMARY — indigo slate: trust, authority, precision */
+  --primary-surface: oklch(95% 0.04 255);
+  --primary-subtle:  oklch(80% 0.09 255);
+  --primary-default: oklch(60% 0.18 255);
+  --primary-action:  oklch(48% 0.19 255);
+  --primary-hover:   oklch(53% 0.19 255);
+  --primary-deep:    oklch(35% 0.16 255);
 
-  /* NEUTRAL COLORS */
-  --background: oklch(92.0% 0.0 0.0);
-  --foreground: oklch(30.0% 0.0 0.0);
-  --card: oklch(95.0% 0.0 0.0);
-  --border: oklch(85.0% 0.0 0.0);
-  --heading: oklch(25.0% 0.0 0.0);
-  --secondary: oklch(75.0% 0.0 0.0);
-  --muted: oklch(80.0% 0.0 0.0);
+  /* ACCENT — teal: growth, collaboration, forward motion */
+  --accent-surface: oklch(94% 0.05 168);
+  --accent-subtle:  oklch(78% 0.11 168);
+  --accent-default: oklch(62% 0.16 168);
+  --accent-action:  oklch(50% 0.16 168);
+  --accent-deep:    oklch(36% 0.13 168);
 
-  /* SEMANTIC COLORS */
-  --success: oklch(65.0% 0.166 150.0);
-  --warning: oklch(75.0% 0.162 70.0);
-  --danger: oklch(60.0% 0.22 30.0);
-  --info: oklch(70.0% 0.15 250.0);
+  /* NEUTRALS — tinted gray: warm, not sterile */
+  --background: oklch(97% 0.008 255);
+  --card:        oklch(93% 0.010 255);
+  --border:      oklch(84% 0.012 255);
+  --muted:       oklch(55% 0.010 255);
+  --secondary:   oklch(68% 0.010 255);
+  --foreground:  oklch(28% 0.015 255);
+  --heading:     oklch(22% 0.015 255);
+
+  /* SEMANTIC */
+  --success: oklch(62% 0.17 145);
+  --warning: oklch(72% 0.16 68);
+  --danger:  oklch(58% 0.21 25);
+  --info:    oklch(62% 0.14 255);
 }
 
 @theme inline {
@@ -31,14 +41,13 @@
 
 @media (prefers-color-scheme: dark) {
   :root {
-    /* NEUTRAL COLORS */
-    --background: oklch(10.0% 0.0 0.0);
-    --foreground: oklch(90.0% 0.0 0.0);
-    --card: oklch(20.0% 0.0 0.0);
-    --border: oklch(30.0% 0.0 0.0);
-    --heading: oklch(95.0% 0.0 0.0);
-    --secondary: oklch(70.0% 0.0 0.0);
-    --muted: oklch(50.0% 0.0 0.0);
+    --background: oklch(14% 0.015 255);
+    --card:        oklch(20% 0.015 255);
+    --border:      oklch(30% 0.015 255);
+    --muted:       oklch(48% 0.010 255);
+    --secondary:   oklch(62% 0.010 255);
+    --foreground:  oklch(91% 0.008 255);
+    --heading:     oklch(96% 0.006 255);
   }
 }
 

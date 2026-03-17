@@ -1,4 +1,11 @@
+'use client';
+
+import { useNavigation } from '@/lib/hooks/useNavigation';
+
 export default function Hero() {
+
+    const { goToSignUp } = useNavigation();
+
     return (
         <section className="relative min-h-screen grid grid-cols-1 lg:grid-cols-2 overflow-hidden bg-background">
             
@@ -14,6 +21,7 @@ export default function Hero() {
                 {/* CTA */}
                 <div className="flex gap-8 mt-2">
                     <button
+                        onClick={ goToSignUp }
                         className="
                             px-6 
                             py-3 

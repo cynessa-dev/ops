@@ -80,7 +80,7 @@ export default function Login() {
                                 hover:shadow-xl
                             "
                         >
-                            Get Started!
+                            Let's Get Started!
                         </button>
                     </form>
                 </div>

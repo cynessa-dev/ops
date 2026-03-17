@@ -1,69 +1,62 @@
 @import "tailwindcss";
 
-:root {
+@theme {
   /* PRIMARY — indigo slate: trust, authority, precision */
-  --primary-surface: oklch(95% 0.04 255);
-  --primary-subtle:  oklch(80% 0.09 255);
-  --primary-default: oklch(60% 0.18 255);
-  --primary-action:  oklch(48% 0.19 255);
-  --primary-hover:   oklch(53% 0.19 255);
-  --primary-deep:    oklch(35% 0.16 255);
+  --color-primary-surface: oklch(95% 0.04 255);
+  --color-primary-subtle:  oklch(80% 0.09 255);
+  --color-primary-default: oklch(60% 0.18 255);
+  --color-primary-action:  oklch(48% 0.19 255);
+  --color-primary-hover:   oklch(53% 0.19 255);
+  --color-primary-deep:    oklch(35% 0.16 255);
 
   /* ACCENT — teal: growth, collaboration, forward motion */
-  --accent-surface: oklch(94% 0.05 168);
-  --accent-subtle:  oklch(78% 0.11 168);
-  --accent-default: oklch(62% 0.16 168);
-  --accent-action:  oklch(50% 0.16 168);
-  --accent-deep:    oklch(36% 0.13 168);
+  --color-accent-surface: oklch(94% 0.05 168);
+  --color-accent-subtle:  oklch(78% 0.11 168);
+  --color-accent-default: oklch(62% 0.16 168);
+  --color-accent-action:  oklch(50% 0.16 168);
+  --color-accent-deep:    oklch(36% 0.13 168);
 
-  /* NEUTRALS — tinted gray: warm, not sterile */
-  --background: oklch(97% 0.008 255);
-  --card:        oklch(93% 0.010 255);
-  --border:      oklch(84% 0.012 255);
-  --muted:       oklch(55% 0.010 255);
-  --secondary:   oklch(68% 0.010 255);
-  --foreground:  oklch(28% 0.015 255);
-  --heading:     oklch(22% 0.015 255);
+  /* NEUTRALS */
+  --color-background: oklch(97% 0.008 255);
+  --color-card:       oklch(93% 0.010 255);
+  --color-border:     oklch(84% 0.012 255);
+  --color-muted:      oklch(55% 0.010 255);
+  --color-secondary:  oklch(68% 0.010 255);
+  --color-foreground: oklch(28% 0.015 255);
+  --color-heading:    oklch(22% 0.015 255);
 
   /* SEMANTIC */
-  --success: oklch(62% 0.17 145);
-  --warning: oklch(72% 0.16 68);
-  --danger:  oklch(58% 0.21 25);
-  --info:    oklch(62% 0.14 255);
-}
-
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-nunito-sans);
-  --font-mono: var(--font-nunito);
+  --color-success: oklch(62% 0.17 145);
+  --color-warning: oklch(72% 0.16 68);
+  --color-danger:  oklch(58% 0.21 25);
+  --color-info:    oklch(62% 0.14 255);
 }
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --background: oklch(14% 0.015 255);
-    --card:        oklch(20% 0.015 255);
-    --border:      oklch(30% 0.015 255);
-    --muted:       oklch(48% 0.010 255);
-    --secondary:   oklch(62% 0.010 255);
-    --foreground:  oklch(91% 0.008 255);
-    --heading:     oklch(96% 0.006 255);
+    --color-background:  oklch(14% 0.015 255);
+    --color-card:        oklch(20% 0.015 255);
+    --color-border:      oklch(30% 0.015 255);
+    --color-muted:       oklch(48% 0.010 255);
+    --color-secondary:   oklch(62% 0.010 255);
+    --color-foreground:  oklch(91% 0.008 255);
+    --color-heading:     oklch(96% 0.006 255);
   }
 }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
+  background: var(--color-background);
+  color: var(--color-foreground);
   font-family: var(--font-nunito), 'Poppins', sans-serif;
 }
 
 h1, h2, h3, h4, h5, h6 {
-  color: var(--heading);
+  color: var(--color-heading);
   font-family: var(--font-nunito-sans), 'Poppins', sans-serif;
 }
 
 .delivery-table th, .delivery-table td {
-  @apply border border-(--border) px-3 py-2;
+  @apply border border-border px-3 py-2;
 }
 
 input[type="number"] {

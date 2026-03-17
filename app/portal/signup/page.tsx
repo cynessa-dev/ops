@@ -82,7 +82,7 @@ export default function Signup() {
                                 hover:shadow-xl
                             "
                         >
-                            Get Started!
+                            Sign Me Up!
                         </button>
                     </form>
                 </div>

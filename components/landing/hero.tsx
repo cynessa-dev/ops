@@ -41,7 +41,8 @@ export default function Hero() {
                             hover:bg-primary-hover 
                             hover:shadow-xl 
                             hover:-translate-y-2 
-                            hover:rotate-2"
+                            hover:rotate-2
+                        "
                     >
                         Get Started!
                     </button>

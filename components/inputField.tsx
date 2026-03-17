@@ -21,7 +21,7 @@ export default function InputField({
         placeholder={placeholder}
         value={value}
         onChange={onChange}
-        className="w-full px-4 py-2 border border-(--border) rounded-md focus:outline-none focus:ring focus:ring-(--secondary)"
+        className="w-full px-4 py-2 border border-border rounded-md focus:outline-none focus:ring focus:ring-secondary"
       />
     </div>
   );

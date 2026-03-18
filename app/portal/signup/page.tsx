@@ -62,6 +62,7 @@ export default function Signup() {
                         
                         {/* SUBMIT */}
                         <button
+                            onClick={ submit }
                             className="
                                 mt-4 
                                 px-6 

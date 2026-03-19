@@ -60,11 +60,29 @@ export default function Setup() {
                         </select>
 
                         {/* SUBMIT */}
-                        <button 
-                            className="w-full mt-6 bg-(--primary-action) text-foreground py-2 rounded cursor-pointer hover:bg-primary-hover transition-colors"
-                            onClick={handleSubmit}
+                        <button
+                            onClick={ submit }
+                            className="
+                                mt-4 
+                                px-6 
+                                py-3 
+                                w-full 
+                                bg-primary-action 
+                                font-semibold 
+                                rounded-md 
+                                shadow-lg 
+                                shadow-primary-action/30 
+                                cursor-pointer 
+                                transition-color 
+                                duration-150 
+                                ease-in-out 
+                                active:translate-y-0 
+                                active:rotate-0 
+                                hover:bg-primary-hover 
+                                hover:shadow-xl
+                            "
                         >
-                            Continue
+                            I'm Ready!
                         </button>
                     </form>
                 </div>

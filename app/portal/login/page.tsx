@@ -3,6 +3,7 @@
 import { useLogin } from "@/lib/hooks/useLogin";
 import { useNavigation } from "@/lib/hooks/useNavigation";
 
+import Button from "@/components/button";
 import InputField from "@/components/inputField";
 import Navigation from "@/components/navigation";
 
@@ -18,7 +19,9 @@ export default function Login() {
     } = useLogin();
     const { goToContractor } = useNavigation();
 
-    const handleLogin = async (e: React.SyntheticEvent) => {        e.preventDefault();
+    const handleLogin = async (e: React.SyntheticEvent) => {
+        e.preventDefault();
+        
         const success = await submit(e);
         if (success) {
             goToContractor();
@@ -59,29 +62,7 @@ export default function Login() {
                         {message && <p className="text-success text-sm mt-2">{message}</p>}
                         
                         {/* SUBMIT */}
-                        <button
-                            className="
-                                mt-4 
-                                px-6 
-                                py-3 
-                                w-full 
-                                bg-primary-action 
-                                font-semibold 
-                                rounded-md 
-                                shadow-lg 
-                                shadow-primary-action/30 
-                                cursor-pointer 
-                                transition-color 
-                                duration-150 
-                                ease-in-out 
-                                active:translate-y-0 
-                                active:rotate-0 
-                                hover:bg-primary-hover 
-                                hover:shadow-xl
-                            "
-                        >
-                            Let's Get Started!
-                        </button>
+                        <Button type="submit" label="Let's Get Started!" action={ handleLogin } />
                     </form>
                 </div>
             </div>

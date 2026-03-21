@@ -2,6 +2,7 @@
 
 import { useSignUp } from "@/lib/hooks/useSignUp";
 
+import Button from "@/components/button";
 import InputField from "@/components/inputField";
 import Navigation from "@/components/navigation";
 
@@ -17,7 +18,6 @@ export default function Signup() {
         error,
         submit,
     } = useSignUp();
-
 
     return (
         <main className="flex justify-center items-center min-w-screen min-h-screen">
@@ -61,30 +61,7 @@ export default function Signup() {
                         {message && <p className="text-success text-sm mt-2">{message}</p>}
                         
                         {/* SUBMIT */}
-                        <button
-                            onClick={ submit }
-                            className="
-                                mt-4 
-                                px-6 
-                                py-3 
-                                w-full 
-                                bg-primary-action 
-                                font-semibold 
-                                rounded-md 
-                                shadow-lg 
-                                shadow-primary-action/30 
-                                cursor-pointer 
-                                transition-color 
-                                duration-150 
-                                ease-in-out 
-                                active:translate-y-0 
-                                active:rotate-0 
-                                hover:bg-primary-hover 
-                                hover:shadow-xl
-                            "
-                        >
-                            Sign Me Up!
-                        </button>
+                        <Button type="submit" label="Sign Me Up!" action={ submit } />
                     </form>
                 </div>
             </div>

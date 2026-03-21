@@ -15,7 +15,9 @@ export default function InputField({
 }: InputFieldProps) {
   return (
     <div className="mb-4">
-      <label className="block text-sm font-medium text-foreground/80 mb-2">{label}</label>
+      <label className="block text-sm font-medium text-foreground/80 mb-2">
+        {label}
+      </label>
       <input
         type={type}
         placeholder={placeholder}

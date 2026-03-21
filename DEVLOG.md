@@ -61,7 +61,6 @@ To explain, `hooks` are used here to communicate between the frontend and backen
 
 As you can see, there's no callback page XD. Again, I won't touch the backend that much until I clean the system. But, there is a `proxy.ts` though. It's basically a Role-based Control Access (RBCA) Module. It prevent Unauthorized access in certain sites, including those who tries to skip signups and logins.
 
-
 ### Lastly
 
 With that, I hope you gain a little bit more understanding in this project. If you got more questions, please don't hesitate to reach out to me. Anyway, that's that. I'll be back for more soon!

@@ -1,4 +1,5 @@
 'use client';
+import Link from "next/link";
 
 import { useSignUp } from "@/lib/hooks/useSignUp";
 
@@ -62,6 +63,16 @@ export default function Signup() {
                         
                         {/* SUBMIT */}
                         <Button type="submit" label="Sign Me Up!" action={ submit } />
+
+                        {/* SWITCH TO LOGIN */}
+                        <div className="mt-6 text-center">
+                            <Link 
+                                href="/portal/login" 
+                                className="text-secondary hover:text-foreground"
+                            >
+                                Already have an account?
+                            </Link>
+                        </div>
                     </form>
                 </div>
             </div>

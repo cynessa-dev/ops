@@ -1,5 +1,7 @@
 'use client';
 
+import Link from "next/link";
+
 import { useLogin } from "@/lib/hooks/useLogin";
 import { useNavigation } from "@/lib/hooks/useNavigation";
 
@@ -63,6 +65,16 @@ export default function Login() {
                         
                         {/* SUBMIT */}
                         <Button type="submit" label="Let's Get Started!" action={ handleLogin } />
+                    
+                        {/* SWITCH TO LOGIN */}
+                        <div className="mt-6 text-center">
+                            <Link 
+                                href="/portal/signup" 
+                                className="text-secondary hover:text-foreground"
+                            >
+                                Don&apos;t have an account?
+                            </Link>
+                        </div>
                     </form>
                 </div>
             </div>

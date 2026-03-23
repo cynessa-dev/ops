@@ -7,6 +7,45 @@
 
 ---
 
+## Back on Track --- [March 23, 2026]
+
+### Reporting Back
+
+Hello, World! I just finished cleaning up the code, I think... XD. Right now, it seems to be much more efficient, redundancies were removed, and codes were refactored. This was necessary to have a clean working area again for a smooth development journey. We will do this again soon, to keep everything proper and elegant.
+
+### Changes Made So Far
+
+Let's start with the [`validatePassword.ts`](https://github.com/cynessa-dev/ops/blob/main/lib/validator/validatePassword.ts). The file contains functions that validates a password based on a set of rules. The rules are as follows:
+
+- Password must be the same as Confirm Password
+- It must be at least 8 characters
+- There must be no leading/trailing whitespaces
+- Only characters a-z, A-Z, 0-9, and certain special characters (!@#-_:?)
+
+For the structure of the code, I modified it by abstracting logics into their own function. The goal here is to have a self-documenting code, **makes it clean, easy to test, and re-usuable!** Another point here is to have an accurate error message to present to the user, just in they got *creative*. One of the rules of SaaS is *"Never trust use input"*.
+
+Moving on, you may also notice that I splitted the RegEx apart, instead of having a single, long RegEx. This is done to prevent confusion (it gets harder to read the longer it is), and to easily modify things when changes are required. [See the Code here!](https://github.com/cynessa-dev/ops/blob/bd84bc75e31da8c8fce37a4a9381b45ca3d1a2ff/lib/validator/validatePassword.ts#L60-L66)
+
+Next is the [`button.tsx`](https://github.com/cynessa-dev/ops/blob/main/components/button.tsx). I simply changed it to match the CTA button. Right now, it only shows the CTA Button, but will have more types in the future!
+
+Lastly, the [`client.ts`](https://github.com/cynessa-dev/ops/blob/main/lib/supabase/client.ts). I failed to notice that it was storing the sessing in the localStorage, instead of using cookies. This resulted in unsucccessful authentication since the [`proxy.ts`](https://github.com/cynessa-dev/ops/blob/main/proxy.ts) was looking for user session inside the cookies, but it was stored in the localStorage. Thankfully, I was able to fix it sooner.
+
+There are couple of minor changes in some files, but it's mostly just structure and commenting. We are not going to go that deep here. Plus it's boring~
+
+### What's the Next Step
+
+On our next development journey, we will now proceed to developing a proper dashboard for users! Right now, our users will be **Client, and Contractors**. The **Client** will be the users who hires contractors to process their goods into something (like a product), then the **Contractors** will be the one to:
+
+- Update the progress for Clients to monitor
+- Receive and Deliver goods through a form
+- Manage teams and workloads (Manager)
+
+The Contractors will have 2 roles, Manager and Employee. They're pretty much self-explanatory, but I'll explain it. Managers are the ones who mainly communicate with clients, manage team, receive and deliver goods, and monitor inventory and sales. While the employees are able to help fill up the goods to be delivered by filling up what they have finished, and be able to communicate with each other.
+
+Of course, there will be teams to group these users together called **Companies**. There is no limit on how many employees a company can hold, but that may change in the future.
+
+That's all for now! See yah later!
+
 ## Looking Back --- [March 19, 2026]
 
 ### Quick Word

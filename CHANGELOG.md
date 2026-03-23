@@ -1,5 +1,17 @@
 # CHANGELOG
 
+## VERSION 0.1.1 - Clean Up 01
+
+LAST COMMIT: *50a83ef53ab18e8dfd06de3ad5edf7fb2d187877*
+
+Cleaned up the structure and inconsistency of the code to improve readability, efficiency, and documentation. Most of the files are affected, but there was no major changes in the logic. However, the following files are modified to improve performance and security.
+
+**FILES MODIFIED FOR IMPROVEMENT:**
+
+- `proxy.ts`
+- `validatePassword.ts`
+- `button.tsx`
+
 ## VERSION 0.1.0 - AUTHENTICATION SYSTEM
 
 LAST COMMIT: *985d9cceb295698c20a3dfd60afa8e3765948586*

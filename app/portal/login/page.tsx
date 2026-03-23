@@ -39,7 +39,7 @@ export default function Login() {
                     <p className="text-secondary text-[1.0rem] font-light">Welcome back!</p>
                 </div>
                 <div>
-                    <form method="post">
+                    <form onSubmit={ handleLogin }>
                         {/* EMAIL */}
                         <InputField 
                             label="Email" 
@@ -64,7 +64,7 @@ export default function Login() {
                         {message && <p className="text-success text-sm mt-2">{message}</p>}
                         
                         {/* SUBMIT */}
-                        <Button type="submit" label="Let's Get Started!" action={ handleLogin } />
+                        <Button type="submit" label="Let's Get Started!" />
                     
                         {/* SWITCH TO LOGIN */}
                         <div className="mt-6 text-center">

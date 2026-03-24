@@ -7,8 +7,6 @@ Hi! Christian, here. Thank you for taking an interest in this project, this is a
 
 ## Project: Ops
 
-This project is part of my hobbies, rather than an actual service. Well, maybe I could turn it into something in the near future, but this will be categorized as one of the Prototype: 2026.
-
 In the very core, this Software as a Service (SaaS) will offer ways to easily record goods that are flowing in and out of a company, mainly through a specialized and customizable form. What makes this different out of the other options is, it will be centralized, organized, and efficient! Later on, we can implement a receipt generator, role-based collaboration, and many more. Right now, the project will slowly move its way up the ladder.
 
 ## Tech Stack

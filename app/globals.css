@@ -1,60 +1,68 @@
 @import "tailwindcss";
 
 @theme {
-  /* PRIMARY — indigo slate: trust, authority, precision */
-  --color-primary-surface: oklch(95% 0.04 255);
-  --color-primary-subtle:  oklch(80% 0.09 255);
-  --color-primary-default: oklch(60% 0.18 255);
-  --color-primary-action:  oklch(48% 0.19 255);
-  --color-primary-hover:   oklch(53% 0.19 255);
-  --color-primary-deep:    oklch(35% 0.16 255);
+    /* PRIMARY — indigo slate: trust, authority, precision */
+    --color-primary-surface: oklch(95% 0.04 255);
+    --color-primary-subtle:  oklch(80% 0.09 255);
+    --color-primary-default: oklch(60% 0.18 255);
+    --color-primary-action:  oklch(48% 0.19 255);
+    --color-primary-hover:   oklch(53% 0.19 255);
+    --color-primary-deep:    oklch(35% 0.16 255);
 
-  /* ACCENT — teal: growth, collaboration, forward motion */
-  --color-accent-surface: oklch(94% 0.05 168);
-  --color-accent-subtle:  oklch(78% 0.11 168);
-  --color-accent-default: oklch(62% 0.16 168);
-  --color-accent-action:  oklch(50% 0.16 168);
-  --color-accent-deep:    oklch(36% 0.13 168);
+    /* ACCENT — teal: growth, collaboration, forward motion */
+    --color-accent-surface: oklch(94% 0.05 168);
+    --color-accent-subtle:  oklch(78% 0.11 168);
+    --color-accent-default: oklch(62% 0.16 168);
+    --color-accent-action:  oklch(50% 0.16 168);
+    --color-accent-deep:    oklch(36% 0.13 168);
 
-  /* NEUTRALS */
-  --color-background: oklch(97% 0.008 255);
-  --color-card:       oklch(93% 0.010 255);
-  --color-border:     oklch(84% 0.012 255);
-  --color-muted:      oklch(55% 0.010 255);
-  --color-secondary:  oklch(68% 0.010 255);
-  --color-foreground: oklch(28% 0.015 255);
-  --color-heading:    oklch(22% 0.015 255);
+    /* NEUTRALS */
+    --color-background: oklch(97% 0.008 255);
+    --color-card:       oklch(93% 0.010 255);
+    --color-border:     oklch(84% 0.012 255);
+    --color-muted:      oklch(55% 0.010 255);
+    --color-secondary:  oklch(68% 0.010 255);
+    --color-foreground: oklch(28% 0.015 255);
+    --color-heading:    oklch(22% 0.015 255);
 
-  /* SEMANTIC */
-  --color-success: oklch(62% 0.17 145);
-  --color-warning: oklch(72% 0.16 68);
-  --color-danger:  oklch(58% 0.21 25);
-  --color-info:    oklch(62% 0.14 255);
+    /* SHADOWS */
+    --shadow-card:       0 1px 2px oklch(55% 0.012 255 / 0.07), 0 4px 12px oklch(55% 0.012 255 / 0.08);
+    --shadow-card-hover: 0 2px 4px oklch(55% 0.012 255 / 0.08), 0 8px 24px oklch(55% 0.012 255 / 0.12);
+
+    /* SEMANTIC */
+    --color-success: oklch(62% 0.17 145);
+    --color-warning: oklch(72% 0.16 68);
+    --color-danger:  oklch(58% 0.21 25);
+    --color-info:    oklch(62% 0.14 255);
 }
 
 @media (prefers-color-scheme: dark) {
-  :root {
-    --color-background:  oklch(14% 0.015 255);
-    --color-card:        oklch(20% 0.015 255);
-    --color-border:      oklch(30% 0.015 255);
-    --color-muted:       oklch(48% 0.010 255);
-    --color-secondary:   oklch(62% 0.010 255);
-    --color-foreground:  oklch(91% 0.008 255);
-    --color-heading:     oklch(96% 0.006 255);
-  }
+    :root {
+        --color-background:  oklch(14% 0.015 255);
+        --color-card:        oklch(20% 0.015 255);
+        --color-border:      oklch(30% 0.015 255);
+        --color-muted:       oklch(48% 0.010 255);
+        --color-secondary:   oklch(62% 0.010 255);
+        --color-foreground:  oklch(91% 0.008 255);
+        --color-heading:     oklch(96% 0.006 255);
+
+        /* SHADOWS */
+        --shadow-card:       none;
+        --shadow-card-hover: none;
+    }
 }
 
 /* WEB LOOK CONFIGURATIONS */
 
 body {
-  background: var(--color-background);
-  color: var(--color-foreground);
-  font-family: var(--font-nunito), 'Poppins', sans-serif;
+    background: var(--color-background);
+    color: var(--color-foreground);
+    font-family: var(--font-nunito), 'Poppins', sans-serif;
 }
 
 h1, h2, h3, h4, h5, h6 {
-  color: var(--color-heading);
-  font-family: var(--font-nunito-sans), 'Poppins', sans-serif;
+    color: var(--color-heading);
+    font-family: var(--font-nunito-sans), 'Poppins', sans-serif;
 }
 
 .material-symbols-rounded {
@@ -68,33 +76,33 @@ h1, h2, h3, h4, h5, h6 {
 /* AESTHETICS */
 
 .delivery-table th, .delivery-table td {
-  @apply border border-border px-3 py-2;
+    @apply border border-border px-3 py-2;
 }
 
 input[type="number"] {
-  -moz-appearance: textfield;
+    -moz-appearance: textfield;
 }
 input[type="number"]::-webkit-inner-spin-button,
 input[type="number"]::-webkit-outer-spin-button {
-  -webkit-appearance: none;
-  margin: 0;
+    -webkit-appearance: none;
+    margin: 0;
 }
 
 /* ANIMATIONS */
 
 .btn-underline::after {
-  content: '';
-  position: absolute;
-  bottom: 0;
-  left: 0;
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
 
-  width: 0%;
-  height: 2px;
-  background-color: currentColor;
+    width: 0%;
+    height: 2px;
+    background-color: currentColor;
 
-  transition: width 200ms ease-in-out;
+    transition: width 200ms ease-in-out;
 }
 
 .btn-underline:hover::after {
-  width: 100%;
+    width: 100%;
 }

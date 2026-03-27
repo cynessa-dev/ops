@@ -1,21 +1,20 @@
 export default function Navigation() {
   return (
-    <nav className="absolute top-0 left-0 right-0 flex justify-between items-center px-6 pt-4 lg:pt-6 xl:pt-16">
-      {/* MENU */}
-      <div>
-        <button type="button" className="text-(--secondary) text-[1rem] xl:text-[1.5rem] font-light tracking-[0.1rem] cursor-pointer">MENU</button>
-      </div>
+    <nav className="flex justify-between items-center px-8 py-5 w-full border-b border-border">
+        {/* BRANDING */}
+        <div>
+            <h1 className="font-semibold">Ops.</h1>
+        </div>
 
-      {/* COMPANY LOGO */}
-      <div>
-        <button type="button" className="text-foreground text-[1rem] xl:text-[2rem] font-light tracking-[0.5rem] cursor-pointer">OPS</button>
-      </div>
-
-      {/* CONTACT */}
-      <div>
-        <button type="button" className="text-(--secondary) text-[1rem] xl:text-[1.5rem] font-light tracking-[0.1rem] cursor-pointer">CONTACT ME</button>
-      </div>
-
+        {/* PROFILE */}
+        <div className="flex items-center space-x-8">
+            <div>
+                JC
+            </div>
+            <div>
+                Juan Dela Cruz
+            </div>
+        </div>
     </nav>
   );
 }

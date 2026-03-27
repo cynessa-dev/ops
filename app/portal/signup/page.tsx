@@ -22,7 +22,6 @@ export default function Signup() {
 
     return (
         <main className="flex justify-center items-center min-w-screen min-h-screen">
-            <Navigation />
             <div className="flex px-6 py-8 flex-col gap-6 w-2/5 bg-card border border-border rounded">
                 <div>
                     <h1 className="text-(--heading) text-[1.5rem] font-bold">Sign Up</h1>

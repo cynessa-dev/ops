@@ -24,11 +24,14 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body
-        className={`${nunitoSans.variable} ${nunito.variable} antialiased`}
-      >
-        {children}
-      </body>
+        <head>
+            <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&icon_names=upload_file,check,nest_clock_farsight_analog,bar_chart" />
+        </head>
+        <body
+            className={`${nunitoSans.variable} ${nunito.variable} antialiased`}
+        >
+            {children}
+        </body>
     </html>
   );
 }

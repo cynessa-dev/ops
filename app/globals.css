@@ -44,6 +44,8 @@
   }
 }
 
+/* WEB LOOK CONFIGURATIONS */
+
 body {
   background: var(--color-background);
   color: var(--color-foreground);
@@ -54,6 +56,16 @@ h1, h2, h3, h4, h5, h6 {
   color: var(--color-heading);
   font-family: var(--font-nunito-sans), 'Poppins', sans-serif;
 }
+
+.material-symbols-rounded {
+    font-variation-settings:
+    'FILL' 0,
+    'wght' 400,
+    'GRAD' 0,
+    'opsz' 24
+}
+
+/* AESTHETICS */
 
 .delivery-table th, .delivery-table td {
   @apply border border-border px-3 py-2;

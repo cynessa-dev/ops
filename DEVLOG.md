@@ -7,6 +7,40 @@
 
 ---
 
+## The Initial Dashboard --- [March 27, 2026]
+
+### The Progress
+
+I'm back! Today, I've made some progress with the Dashboard, employee-side to be specific. I pulled back the old navigation bar since it looks so out of place and flat. So, I designed a new one (initial design), then used it for the new Dashboard. After that, I created 1 major component and 2 minor ones.
+
+### The Summary Board
+
+The first one is the [`summaryBoard.tsx`](https://github.com/cynessa-dev/ops/blob/1d784dadd97a47144f181ad4a61e8629728703c5/components/dashboard/contractor/employee/summaryBoard.tsx). It is simply a component that greets the user with the statistics of his account. The data includes:
+
+- Number of submitted forms
+- Approved and pending forms
+- Performance rating for the week
+
+But, before that, let's tackle the greetings. I developed a component called [`greet.tsx`](https://github.com/cynessa-dev/ops/blob/1d784dadd97a47144f181ad4a61e8629728703c5/components/dashboard/contractor/employee/greet.tsx) that contains a block of code that simply greets the user "Good *something*, *name*!" its primary goal is to simply display a greeting for the user. It has an external utility function called [`getGreet.ts`](https://github.com/cynessa-dev/ops/blob/1d784dadd97a47144f181ad4a61e8629728703c5/lib/utility/getGreet.ts). It contains logic for checking the current time of the user's machine, then returns a greetings. The following are the possible greet based on time:
+
+- Good Morning
+- Good Afternoon
+- Good Evening
+
+These utility function is a little dynamic, but it lacks the proper greetings, meaning to say, it only updates when it is re-rendered. Regardless, it is still clean and modular, which is what I am trying to practice to improve my development skill.
+
+The idea of this utility function is simply retrieved the user's current hour and checks if it is morning (12am - 12pm), afternoon (1pm - 6pm), or evening (7pm - 11pm). The value on the code is in a **24-hour format**.
+
+Next on the list is [`statCard.tsx`](https://github.com/cynessa-dev/ops/blob/1d784dadd97a47144f181ad4a61e8629728703c5/components/dashboard/contractor/employee/statCard.tsx)! It is a component whose sole purpose is to display clean statistical data. You will notice on [`layout.tsx`](https://github.com/cynessa-dev/ops/blob/1d784dadd97a47144f181ad4a61e8629728703c5/app/layout.tsx#L28) that there is a new code that uses the **Google API Material Icon**. This will be now my source of icons indefinitely, since it is modern, clean, and has lots of icons available for free. As much as possible, I try to make use of what others has provided. It helps on the long run, plus I'll be able to **study** their code and be able to **contribute** in the future. Back to `statCard.tsx`, I simply created a card and added some Props for it take data from its parent component.
+
+Now the major component, the `summaryBoard.tsx`! It is the first component that will face the user, it is supposed to be clean and welcoming. It's goal is to not overwhelm the user of too much information , while providing necessary data to report the user's current status.
+
+Some additional changes are the color palette, I added a new shadow color for light mode. There is **no glow** color for dark mode, since I want it to be flat for now. **Less is more**.
+
+One more thing, I also experienced some package vulnerabilities. I had to fix it, but one major package is also affected. The `Next.js` package. I had to carefully fix it through `npm audit fix --force`, and fortunately, it worked. Seems like Next.js added some security enhancements.
+
+That's my progress so far, I'll make sure to continue my development for this project. See yah again later!
+
 ## Back on Track --- [March 23, 2026]
 
 ### Reporting Back

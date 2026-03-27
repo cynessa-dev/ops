@@ -61,7 +61,7 @@ export default function Setup() {
 
                         {/* SUBMIT */}
                         <button
-                            onClick={ submit }
+                            onClick={ handleSubmit }
                             className="
                                 mt-4 
                                 px-6 
@@ -82,7 +82,7 @@ export default function Setup() {
                                 hover:shadow-xl
                             "
                         >
-                            I'm Ready!
+                            I&apos;m Ready!
                         </button>
                     </form>
                 </div>

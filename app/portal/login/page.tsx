@@ -7,7 +7,6 @@ import { useNavigation } from "@/lib/hooks/useNavigation";
 
 import Button from "@/components/button";
 import InputField from "@/components/inputField";
-import Navigation from "@/components/navigation";
 
 export default function Login() {
     const {

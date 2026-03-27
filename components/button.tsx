@@ -1,7 +1,7 @@
 type ButtonProps = {
     type?: 'submit' | 'button';
     label: string;
-    action?: (...args: any[]) => any | undefined;
+    action?: () => void;
 };
 
 export default function Button({ 

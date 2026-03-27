@@ -5,7 +5,6 @@ import { useSignUp } from "@/lib/hooks/useSignUp";
 
 import Button from "@/components/button";
 import InputField from "@/components/inputField";
-import Navigation from "@/components/navigation";
 
 export default function Signup() {
     const {

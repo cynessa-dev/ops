@@ -12,9 +12,9 @@ export default function RecordInAndOut() {
     }
 
     return (
-        <div className="flex flex-col space-x-4 mx-8 my-4 md:flex-row">
+        <section className="flex flex-col space-x-4 mx-8 my-4 md:flex-row">
             <Button type="button" label="Record Inbound Goods" action={ handleRecordInboundGoods } />
             <Button type="button" label="Record Outbound Goods" action={ handleRecordOutboundGoods } />
-        </div>
+        </section>
     );
 }

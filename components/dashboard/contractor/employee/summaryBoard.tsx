@@ -3,7 +3,7 @@ import StatCard from "@/components/dashboard/contractor/employee/statCard"
 
 export default function SummaryBoard() {
     return (
-        <div className="px-8">
+        <section className="px-8">
             {/* GREETINGS */}
             <Greet name="Chano" />
 
@@ -14,6 +14,6 @@ export default function SummaryBoard() {
                 <StatCard title="Pending" data="0" icon="schedule" />
                 <StatCard title="This Week" data="0" icon="bar_chart" />
             </div>
-        </div>
+        </section>
     );
 }

@@ -3,8 +3,8 @@ import Link from "next/link";
 
 import { useSignUp } from "@/lib/hooks/useSignUp";
 
-import Button from "@/components/ui/button";
-import InputField from "@/components/ui/inputField";
+import Button from "@/components/ui/Button";
+import InputField from "@/components/ui/InputField";
 
 export default function Signup() {
     const {

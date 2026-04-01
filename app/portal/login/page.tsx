@@ -5,8 +5,8 @@ import Link from "next/link";
 import { useLogin } from "@/lib/hooks/useLogin";
 import { useNavigation } from "@/lib/hooks/useNavigation";
 
-import Button from "@/components/ui/button";
-import InputField from "@/components/ui/inputField";
+import Button from "@/components/ui/Button";
+import InputField from "@/components/ui/InputField";
 
 export default function Login() {
     const {

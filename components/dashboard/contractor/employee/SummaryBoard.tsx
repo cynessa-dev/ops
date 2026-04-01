@@ -1,5 +1,5 @@
-import Greet from "@/components/dashboard/contractor/employee/greet";
-import StatCard from "@/components/dashboard/contractor/employee/statCard"
+import Greet from "@/components/dashboard/contractor/employee/Greet";
+import StatCard from "@/components/dashboard/contractor/employee/StatCard"
 
 export default function SummaryBoard() {
     return (

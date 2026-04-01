@@ -8,7 +8,7 @@ export default function SummaryBoard() {
             <Greet name="Chano" />
 
             {/* SUMMARY CARDS */}
-            <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+            <div className="grid grid-cols-1 gap-4 sm:grid-cols-2">
                 <StatCard title="My Submissions" data="0" icon="upload_file" />
                 <StatCard title="Approved" data="0" icon="check" />
                 <StatCard title="Pending" data="0" icon="schedule" />

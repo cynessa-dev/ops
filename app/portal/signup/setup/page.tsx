@@ -1,6 +1,6 @@
 'use client';
 
-import InputField from "@/components/inputField";
+import InputField from "@/components/ui/inputField";
 import { useSetup } from "@/lib/hooks/useSetup";
 import { useNavigation } from "@/lib/hooks/useNavigation";
 

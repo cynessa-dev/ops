@@ -25,7 +25,17 @@ export default function RootLayout({
   return (
     <html lang="en">
         <head>
-            <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&icon_names=bar_chart,check,schedule,upload_file&display=swap" />
+            <link
+                rel="stylesheet"
+                href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&icon_
+                    names=
+                        bar_chart,
+                        check,
+                        schedule,
+                        upload_file,
+                        assignment
+                    &display=swap"
+            />
         </head>
         <body
             className={`${nunitoSans.variable} ${nunito.variable} antialiased`}

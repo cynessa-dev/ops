@@ -1,7 +1,7 @@
 type CardProps = {
     title: string;
     data: string;
-    icon: 'bar_chart' | 'check' | 'schedule' | 'upload_file';
+    icon: string;
 }
 
 export default function StatCard({ title, data, icon }: CardProps) {

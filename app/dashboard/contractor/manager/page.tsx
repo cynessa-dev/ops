@@ -15,6 +15,15 @@ export default function Manager() {
                 ]}
             />
             <Table
+                title="Pending Approvals"
+                icon="schedule"
+                headers={["REF", "TYPE", "GOODS", "QTY", "BY", "DATE", "STATUS", "ACTION"]}
+                rows={[
+                    ["123456", "Purchase Order", "Office Supplies", "10", "John Doe", "2024-06-01", "Pending", "Approve"],
+                    ["123457", "Purchase Order", "Electronics", "5", "Jane Smith", "2024-06-02", "Pending", "Approve"]
+                ]}
+            />
+            <Table
                 title="All Goods Flow"
                 icon="assignment"
                 headers={["REF", "TYPE", "GOODS", "QTY", "BY", "DATE", "STATUS"]}

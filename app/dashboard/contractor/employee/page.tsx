@@ -1,7 +1,7 @@
 import Navigation from "@/components/ui/Navigation";
-import Table from "@/components/dashboard/contractor/employee/Table";
 import RecordInAndOut from "@/components/dashboard/contractor/employee/ActionCenter";
 import SummaryBoard from "@/components/dashboard/contractor/employee/SummaryBoard";
+import Table from "@/components/dashboard/contractor/employee/Table";
 
 export default function Manager() {
     return(

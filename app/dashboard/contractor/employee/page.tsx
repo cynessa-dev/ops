@@ -1,5 +1,5 @@
 import Navigation from "@/components/ui/Navigation";
-import RecentSubmissions from "@/components/dashboard/contractor/employee/RecentSubmissions";
+import Table from "@/components/dashboard/contractor/employee/Table";
 import RecordInAndOut from "@/components/dashboard/contractor/employee/ActionCenter";
 import SummaryBoard from "@/components/dashboard/contractor/employee/SummaryBoard";
 
@@ -16,7 +16,14 @@ export default function Manager() {
                 ]}
             />
             <RecordInAndOut />
-            <RecentSubmissions />
+            <Table 
+                headers={["REF", "TYPE", "GOODS", "QTY", "DATE", "STATUS"]}
+                rows={[
+                    ["123456", "Purchase Order", "Office Supplies", "10", "2024-06-01", "Approved"],
+                    ["123456", "Purchase Order", "Office Supplies", "10", "2024-06-01", "Approved"],
+                    ["123456", "Purchase Order", "Office Supplies", "10", "2024-06-01", "Approved"]
+                ]}
+            />
         </main>
     );
 }

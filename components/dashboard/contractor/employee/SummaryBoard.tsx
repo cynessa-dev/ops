@@ -11,7 +11,7 @@ type SummaryProps = {
 
 export default function SummaryBoard({ statCardData }: SummaryProps) {
     return (
-        <section className="px-8 select-none">
+        <section className="px-8">
             {/* GREETINGS */}
             <Greet name="Chano" />
 

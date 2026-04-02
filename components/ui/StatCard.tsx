@@ -8,7 +8,7 @@ export default function StatCard({ title, data, icon }: CardProps) {
   return (
     <div className="flex justify-start items-center pr-6 py-4 border border-border rounded-xl not-dark:shadow-card">
         <div className="flex px-10 w-10 h-10 shrink-0 justify-center items-center rounded-xl">
-            <span className="material-symbols-rounded">
+            <span className="material-symbols-rounded select-none">
                 { icon }
             </span>
         </div>

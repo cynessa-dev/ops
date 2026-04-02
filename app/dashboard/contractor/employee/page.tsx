@@ -16,7 +16,9 @@ export default function Manager() {
                 ]}
             />
             <RecordInAndOut />
-            <Table 
+            <Table
+                title="My Recent Submissions"
+                icon="assignment"
                 headers={["REF", "TYPE", "GOODS", "QTY", "DATE", "STATUS"]}
                 rows={[
                     ["123456", "Purchase Order", "Office Supplies", "10", "2024-06-01", "Approved"],

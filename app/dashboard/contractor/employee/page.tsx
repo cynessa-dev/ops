@@ -1,5 +1,5 @@
+import ActionCenter from "@/components/dashboard/contractor/employee/ActionCenter";
 import Navigation from "@/components/ui/Navigation";
-import RecordInAndOut from "@/components/dashboard/contractor/employee/ActionCenter";
 import SummaryBoard from "@/components/dashboard/contractor/employee/SummaryBoard";
 import Table from "@/components/dashboard/contractor/employee/Table";
 
@@ -15,7 +15,7 @@ export default function Manager() {
                     { title: "This Week", data: "0", icon: "bar_chart" }
                 ]}
             />
-            <RecordInAndOut />
+            <ActionCenter />
             <Table
                 title="My Recent Submissions"
                 icon="assignment"

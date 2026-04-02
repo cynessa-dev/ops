@@ -5,7 +5,7 @@ type SummaryProps = {
     statCardData: {
         title: string;
         data: string;
-        icon: 'bar_chart' | 'check' | 'schedule' | 'upload_file';
+        icon: 'assignment_returned' | 'assignment_turned_in' | 'bar_chart' | 'check' | 'schedule' | 'upload_file';
     }[];
 }
 

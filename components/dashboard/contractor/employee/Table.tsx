@@ -1,16 +1,24 @@
 
 type tableData = {
+    title?: string;
+    icon?: string;
     headers: string[];
     rows: string[][];
 }
 
-export default function Table({ headers, rows }: tableData) {
+export default function Table({ title, icon, headers, rows }: tableData) {
     return (
         <section className="mt-12 mx-8">
-            <div className="flex items-center gap-2 mb-4 text-[1.125rem] font-semibold">
-                <span className="material-symbols-rounded">assignment</span>
-                <h2>My Recent Submissions</h2>
-            </div>
+            { title && (
+                <div className="flex items-center gap-2 mb-4 text-[1.125rem] font-semibold">
+                    { icon && (
+                        <span className="material-symbols-rounded">
+                            { icon }
+                        </span>
+                    ) }
+                    <h2>{ title }</h2>
+                </div>
+            ) }
             <div className="border border-border rounded-xl overflow-x-auto ">
                 <table className="w-full">
                     <thead>

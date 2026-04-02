@@ -2,7 +2,7 @@
 
 import Button from "@/components/ui/Button";
 
-export default function RecordInAndOut() {
+export default function ActionCenter() {
     function handleRecordInboundGoods() {
         // Logic for recording inbound goods goes here
     }

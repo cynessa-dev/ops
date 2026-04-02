@@ -4,7 +4,7 @@ type tableData = {
     rows: string[][];
 }
 
-export default function RecentSubmissions({ headers, rows }: tableData) {
+export default function Table({ headers, rows }: tableData) {
     return (
         <section className="mt-12 mx-8">
             <div className="flex items-center gap-2 mb-4 text-[1.125rem] font-semibold">

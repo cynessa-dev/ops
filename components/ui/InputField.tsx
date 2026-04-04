@@ -1,7 +1,7 @@
 type InputFieldProps = {
     type: string;
-    label: string;
-    placeholder: string;
+    label?: string;
+    placeholder?: string;
     value?: string;
     onChange?: React.ChangeEventHandler<HTMLInputElement>;
 };
@@ -14,10 +14,12 @@ export default function InputField({
     onChange,
 }: InputFieldProps) {
     return (
-        <div className="mb-4">
-            <label className="block text-sm font-medium text-foreground/80 mb-2">
-                {label}
-            </label>
+        <div>
+            { label && (
+                <label className="block text-sm font-medium text-foreground/80 mb-2">
+                    {label}
+                </label>
+            )}
             <input
                 type={type}
                 placeholder={placeholder}

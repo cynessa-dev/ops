@@ -1,6 +1,6 @@
 import Navigation from "@/components/ui/Navigation";
 import SummaryBoard from "@/components/dashboard/contractor/employee/SummaryBoard";
-import Table from "@/components/dashboard/contractor/employee/Table";
+import Table from "@/components/ui/Table";
 
 export default function Manager() {
     return(

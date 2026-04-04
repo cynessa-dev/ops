@@ -2,30 +2,10 @@
 
 import Button from "@/components/ui/Button";
 import SlideOver from "@/components/ui/SlideOver";
-import useSlideOver from "@/lib/hooks/useSlideOver";
+import useActionCenter from "@/lib/hooks/useActionCenter";
 
 export default function ActionCenter() {
-    const { isOpen, openSlideOver, closeSlideOver } = useSlideOver();
-
-    function recordInboundGoods() {
-        // Logic for recording inbound goods goes here
-    }
-
-    function recordOutboundGoods() {
-        // Logic for recording outbound goods goes here
-    }
-
-    function handleClick(method: 'inbound' | 'outbound') {
-        if (method === 'inbound') {
-            recordInboundGoods();
-        } else if (method === 'outbound') {
-            recordOutboundGoods();
-        } else {
-            return; // Invalid method, do nothing
-        }
-
-        openSlideOver();
-    }
+    const { isOpen, closeSlideOver, handleClick } = useActionCenter();
 
     return (
         <>

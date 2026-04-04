@@ -38,22 +38,24 @@ export default function Login() {
                 </div>
                 <div>
                     <form onSubmit={ handleLogin }>
-                        {/* EMAIL */}
-                        <InputField 
-                            label="Email" 
-                            type="email" 
-                            placeholder="Enter your email" 
-                            value={email}
-                            onChange={(e) => setEmail(e.target.value)}
-                        />
-                        {/* PASSWORD */}
-                        <InputField 
-                            label="Password" 
-                            type="password" 
-                            placeholder="Enter your password" 
-                            value={password}
-                            onChange={(e) => setPassword(e.target.value)}
-                        />
+                        <div className="flex flex-col gap-y-4 w-full">
+                            {/* EMAIL */}
+                            <InputField 
+                                label="Email" 
+                                type="email" 
+                                placeholder="Enter your email" 
+                                value={email}
+                                onChange={(e) => setEmail(e.target.value)}
+                            />
+                            {/* PASSWORD */}
+                            <InputField 
+                                label="Password" 
+                                type="password" 
+                                placeholder="Enter your password" 
+                                value={password}
+                                onChange={(e) => setPassword(e.target.value)}
+                            />
+                        </div>
 
                         {/* DISPLAY ERROR MESSAGE */}
                         {error && <p className="text-danger text-sm mt-2">{error}</p>}

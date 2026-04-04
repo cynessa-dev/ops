@@ -28,31 +28,33 @@ export default function Signup() {
                 </div>
                 <div>
                     <form method="post">
-                        {/* EMAIL */}
-                        <InputField 
-                            label="Email" 
-                            type="email" 
-                            placeholder="Enter your email" 
-                            value={email}
-                            onChange={(e) => setEmail(e.target.value)}
-                        />
-                        {/* PASSWORD */}
-                        <InputField 
-                            label="Password" 
-                            type="password" 
-                            placeholder="Enter your password" 
-                            value={password}
-                            onChange={(e) => setPassword(e.target.value)}
-                        />
-                        {/* CONFIRM PASSWORD */}
-                        <InputField 
-                            label="Confirm Password" 
-                            type="password" 
-                            placeholder="Confirm your password" 
-                            value={confirmPassword} 
-                            onChange={(e) => setConfirmPassword(e.target.value)}
-                        />
-
+                        <div className="flex flex-col gap-y-4 w-full">
+                            {/* EMAIL */}
+                            <InputField 
+                                label="Email" 
+                                type="email" 
+                                placeholder="Enter your email" 
+                                value={email}
+                                onChange={(e) => setEmail(e.target.value)}
+                            />
+                            {/* PASSWORD */}
+                            <InputField 
+                                label="Password" 
+                                type="password" 
+                                placeholder="Enter your password" 
+                                value={password}
+                                onChange={(e) => setPassword(e.target.value)}
+                            />
+                            {/* CONFIRM PASSWORD */}
+                            <InputField 
+                                label="Confirm Password" 
+                                type="password" 
+                                placeholder="Confirm your password" 
+                                value={confirmPassword} 
+                                onChange={(e) => setConfirmPassword(e.target.value)}
+                            />
+                        </div>
+                        
                         {/* DISPLAY ERROR MESSAGE */}
                         {error && <p className="text-danger text-sm mt-2">{error}</p>}
 

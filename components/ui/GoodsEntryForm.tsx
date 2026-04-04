@@ -37,7 +37,7 @@ export default function GoodsEntryForm() {
         },
     ];
 
-    const handleSubmit = (items: Record<string, any>[]) => {
+    const handleSubmit = (items: Record<string, unknown>[]) => {
         console.log("Submitted items:", items);
         // Add your submission logic here
     };

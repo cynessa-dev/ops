@@ -17,17 +17,19 @@ export interface ColumnConfig {
     max?: number;
 }
 
+type TableFormRow = Record<string, string | number>;
+
 interface TableFormProps {
     columns: ColumnConfig[];
     title?: string;
-    onSubmit?: (items: Record<string, any>[]) => void;
+    onSubmit?: (items: TableFormRow[]) => void;
 }
 
 export default function TableForm({ columns, title, onSubmit }: TableFormProps) {
-    const [items, setItems] = useState<Record<string, any>[]>([createEmptyRow()]);
+    const [items, setItems] = useState<TableFormRow[]>([createEmptyRow()]);
 
-    function createEmptyRow(): Record<string, any> {
-        const row: Record<string, any> = {};
+    function createEmptyRow(): TableFormRow {
+        const row: TableFormRow = {};
         columns.forEach((col) => {
             row[col.key] = col.type === "number" ? 0 : "";
         });
@@ -38,7 +40,7 @@ export default function TableForm({ columns, title, onSubmit }: TableFormProps) 
         setItems([...items, createEmptyRow()]);
     }
 
-    function updateField(index: number, key: string, value: any) {
+    function updateField(index: number, key: string, value: string | number) {
         const updatedItems = [...items];
         updatedItems[index][key] = value;
         setItems(updatedItems);
@@ -81,13 +83,13 @@ export default function TableForm({ columns, title, onSubmit }: TableFormProps) 
                                         <td key={`${ index } - ${ col.key }`} className="p-2">
                                             {col.type === "select" ? (
                                                 <Select 
-                                                    value={ item[col.key] }
+                                                    value={ item[col.key] as string }
                                                     onChange={ (value) => updateField(index, col.key, value) }
                                                     options={ col.options || [] }
                                                 />
                                             ) : col.key === "quantity" ? (
                                                 <QuantitySpinner
-                                                    value={item[col.key]}
+                                                    value={item[col.key] as number}
                                                     min={col.min}
                                                     max={col.max}
                                                     onChange={(value) => updateField(index, col.key, value)}

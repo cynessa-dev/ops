@@ -1,12 +1,12 @@
 'use client';
 
 import Button from "@/components/ui/Button";
+import SlideOver from "@/components/ui/SlideOver";
+import useSlideOver from "@/lib/hooks/useSlideOver";
 
-type ActionCenterProps = {
-    onOpen: () => void;
-};
+export default function ActionCenter() {
+    const { isOpen, openSlideOver, closeSlideOver } = useSlideOver();
 
-export default function ActionCenter({ onOpen }: ActionCenterProps) {
     function recordInboundGoods() {
         // Logic for recording inbound goods goes here
     }
@@ -24,13 +24,16 @@ export default function ActionCenter({ onOpen }: ActionCenterProps) {
             return; // Invalid method, do nothing
         }
 
-        onOpen(); // Open the slide over after handling the action
+        openSlideOver();
     }
 
     return (
-        <section className="flex flex-col space-x-4 mx-8 my-4 md:flex-row">
-            <Button type="button" label="Record Inbound Goods" action={ () => handleClick('inbound') } />
-            <Button type="button" label="Record Outbound Goods" action={ () => handleClick('outbound') } />
-        </section>
+        <>
+            <section className="flex flex-col space-x-4 mx-8 my-4 md:flex-row">
+                <Button type="button" label="Record Inbound Goods" action={ () => handleClick('inbound') } />
+                <Button type="button" label="Record Outbound Goods" action={ () => handleClick('outbound') } />
+            </section>
+            <SlideOver isOpen={ isOpen } onClose={ closeSlideOver } />
+        </>
     );
 }

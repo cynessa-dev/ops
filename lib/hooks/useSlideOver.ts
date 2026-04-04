@@ -3,22 +3,22 @@ import { useCallback, useState } from "react";
 export default function useSlideOver() {
     const [isOpen, setIsOpen] = useState(false);
 
-    const open = useCallback(() => {
+    const openSlideOver = useCallback(() => {
         setIsOpen(true);
     }, []);
 
-    const close = useCallback(() => {
+    const closeSlideOver = useCallback(() => {
         setIsOpen(false);
     }, []);
 
-    const toggle = useCallback(() => {
+    const toggleSlideOver = useCallback(() => {
         setIsOpen((current) => !current);
     }, []);
 
     return {
         isOpen,
-        open,
-        close,
-        toggle,
+        openSlideOver,
+        closeSlideOver,
+        toggleSlideOver,
     };
 }

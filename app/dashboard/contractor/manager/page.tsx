@@ -5,7 +5,7 @@ import Table from "@/components/dashboard/contractor/employee/Table";
 export default function Manager() {
     return(
         <main>
-            <Navigation />
+            <Navigation name="Chano" />
             <SummaryBoard 
                 statCardData={[
                     { title: "Pending Approval", data: "0", icon: "schedule" },

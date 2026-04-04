@@ -6,7 +6,7 @@ import Table from "@/components/dashboard/contractor/employee/Table";
 export default function Manager() {
     return(
         <main>
-            <Navigation />
+            <Navigation name="Chano" />
             <SummaryBoard 
                 statCardData={[
                     { title: "My Submissions", data: "0", icon: "upload_file" },

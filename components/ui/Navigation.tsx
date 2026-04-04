@@ -1,4 +1,8 @@
-export default function Navigation() {
+type NavigationProps = {
+    name: string;
+}
+
+export default function Navigation({ name }: NavigationProps) {
   return (
     <nav className="flex justify-between items-center px-8 py-5 w-full border-b border-border">
         {/* BRANDING */}
@@ -9,10 +13,7 @@ export default function Navigation() {
         {/* PROFILE */}
         <div className="flex items-center space-x-8">
             <div>
-                JC
-            </div>
-            <div>
-                Juan Dela Cruz
+                { name }
             </div>
         </div>
     </nav>

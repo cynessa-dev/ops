@@ -1,5 +1,8 @@
 'use client';
 
+import Button from "@/components/ui/Button";
+import GoodsEntryForm from "@/components/ui/GoodsEntryForm";
+
 type SlideOverProps = {
     isOpen: boolean;
     onClose: () => void;
@@ -31,24 +34,22 @@ export default function SlideOver({ isOpen, onClose }: SlideOverProps) {
                     right-0
                     p-6
                     h-full
-                    w-80
+                    w-2/3
+                    max-w-3xl
                     bg-card
                     shadow-lg
                     transform
                     transition-transform
                     duration-300
                     z-50
+                    overflow-y-auto
                     ${ isOpen ? "translate-x-0" : "translate-x-full" }
                 `}
             >
-                <h2 className="text-xl font-semibold mb-4">Slide Over Panel</h2>
-                <p>This is the content of the slide over. You can put any information or actions here.</p>
-                <button 
-                    onClick={ onClose }
-                    className="mt-4 px-4 py-2 bg-danger text-foreground font-semibold rounded cursor-pointer"
-                >
-                    Cancel
-                </button>
+                
+                <GoodsEntryForm />
+
+                <Button type="button" label="Cancel" accent="danger" action={ onClose } />
             </div>
         </>
     );

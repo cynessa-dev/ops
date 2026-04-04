@@ -3,6 +3,7 @@
 import InputField from "@/components/ui/InputField";
 import { useSetup } from "@/lib/hooks/useSetup";
 import { useNavigation } from "@/lib/hooks/useNavigation";
+import Select from "@/components/ui/Select";
 
 export default function Setup() {
     const {
@@ -32,32 +33,34 @@ export default function Setup() {
                 </div>
                 <div>
                     <form method="POST">
-                        {/* FIRST NAME */}
-                        <InputField 
-                            label="First Name" 
-                            type="text" 
-                            placeholder="Enter your first name"
-                            value={firstName}
-                            onChange={(e) => setFirstName(e.target.value)}
-                        />
-                        {/* LAST NAME */}
-                        <InputField 
-                            label="Last Name" 
-                            type="text" 
-                            placeholder="Enter your last name"
-                            value={lastName}
-                            onChange={(e) => setLastName(e.target.value)}
-                        />
-                        {/* ROLE */}
-                        <select 
-                            className="w-full px-3 py-2 bg-card border border-border rounded mt-4 focus:outline-none focus:ring focus:ring-secondary"
-                            value={role}
-                            onChange={(e) => setRole(e.target.value)}
-                        >
-                            <option value="">Select your role</option>
-                            <option value="client">Client</option>
-                            <option value="contractor">Contractor</option>
-                        </select>
+                        <div className="flex flex-col gap-y-4 w-full">
+                            {/* FIRST NAME */}
+                            <InputField 
+                                label="First Name" 
+                                type="text" 
+                                placeholder="Enter your first name"
+                                value={firstName}
+                                onChange={(e) => setFirstName(e.target.value)}
+                            />
+                            {/* LAST NAME */}
+                            <InputField 
+                                label="Last Name" 
+                                type="text" 
+                                placeholder="Enter your last name"
+                                value={lastName}
+                                onChange={(e) => setLastName(e.target.value)}
+                            />
+                            {/* ROLE */}
+                            <Select 
+                                value={ role }
+                                onChange={ setRole }
+                                options={[
+                                    { value: "invalid", label: "Set up as..." },
+                                    { value: "client", label: "Client" },
+                                    { value: "contractor", label: "Contractor" }
+                                ]}
+                            />
+                        </div>
 
                         {/* SUBMIT */}
                         <button

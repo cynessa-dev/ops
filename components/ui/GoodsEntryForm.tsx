@@ -9,7 +9,7 @@ export default function GoodsEntryForm() {
             key: "goodsName",
             label: "Goods Name",
             type: "text",
-            placeholder: "Enter goods name...",
+            placeholder: "e.g. Screws",
         },
         {
             key: "quantity",
@@ -33,7 +33,7 @@ export default function GoodsEntryForm() {
             key: "remarks",
             label: "Remarks",
             type: "text",
-            placeholder: "Add any remarks...",
+            placeholder: "Optional notes...",
         },
     ];
 

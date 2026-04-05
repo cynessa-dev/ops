@@ -119,7 +119,9 @@ export default function TableForm({ columns, title, onSubmit }: TableFormProps) 
                         </tbody>
                     </table>
                     
-                    <Button type="button" label="+ Add Row" action={ addItem } />
+                    <div className="inline-block mt-4 p-8 w-full border border-dashed border-border rounded-lg">
+                        <Button type="button" label="+ Add Row" accent="secondary" action={ addItem } />
+                    </div>
                 </div>
                 
                 <Button type="submit" label="Submit" />

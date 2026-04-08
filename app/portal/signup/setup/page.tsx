@@ -1,9 +1,10 @@
 'use client';
 
+import { useNavigation } from "@/lib/hooks/useNavigation";
+import { useSetup } from "@/lib/hooks/useSetup";
+
 import Button from "@/components/ui/Button";
 import InputField from "@/components/ui/InputField";
-import { useSetup } from "@/lib/hooks/useSetup";
-import { useNavigation } from "@/lib/hooks/useNavigation";
 import Select from "@/components/ui/Select";
 
 export default function Setup() {

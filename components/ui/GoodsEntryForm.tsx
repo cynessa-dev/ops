@@ -1,7 +1,7 @@
 
 'use client';
 
-import TableForm, { ColumnConfig } from "@/components/ui/TableForm";
+import Table, { ColumnConfig } from "@/components/ui/Table";
 
 export default function GoodsEntryForm() {
     const columns: ColumnConfig[] = [
@@ -42,5 +42,5 @@ export default function GoodsEntryForm() {
         // Add your submission logic here
     };
 
-    return <TableForm columns={columns} title="Goods Entry Form" onSubmit={handleSubmit} />;
+    return <Table columns={columns} title="Goods Entry Form" onSubmit={handleSubmit} />;
 }

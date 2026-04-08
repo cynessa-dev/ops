@@ -55,15 +55,16 @@ export default function Signup() {
                             />
                         </div>
                         
-                        {/* DISPLAY ERROR MESSAGE */}
-                        {error && <p className="text-danger text-sm mt-2">{error}</p>}
+                        <div className="mt-8">
+                            {/* DISPLAY ERROR MESSAGE */}
+                            {error && <p className="text-danger text-sm mt-2">{error}</p>}
 
-                        {/* DISPLAY SUCCESS MESSAGE */}
-                        {message && <p className="text-success text-sm mt-2">{message}</p>}
-                        
-                        {/* SUBMIT */}
-                        <Button type="submit" label="Sign Me Up!" action={ submit } />
-
+                            {/* DISPLAY SUCCESS MESSAGE */}
+                            {message && <p className="text-success text-sm mt-2">{message}</p>}
+                            
+                            {/* SUBMIT */}
+                            <Button type="submit" label="Sign Me Up!" action={ submit } />
+                        </div>
                         {/* SWITCH TO LOGIN */}
                         <div className="mt-6 text-center">
                             <Link 

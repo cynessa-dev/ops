@@ -27,7 +27,7 @@ export default function Signup() {
                     <p className="text-(--secondary) text-[1.0rem] font-light">Let&apos;s get you setup!</p>
                 </div>
                 <div>
-                    <form method="post">
+                    <form method="post" onSubmit={ submit }>
                         <div className="flex flex-col gap-y-4 w-full">
                             {/* EMAIL */}
                             <InputField 
@@ -63,7 +63,7 @@ export default function Signup() {
                             {message && <p className="text-success text-sm mt-2">{message}</p>}
                             
                             {/* SUBMIT */}
-                            <Button type="submit" label="Sign Me Up!" action={ submit } />
+                            <Button type="submit" label="Sign Me Up!" />
                         </div>
                         {/* SWITCH TO LOGIN */}
                         <div className="mt-6 text-center">

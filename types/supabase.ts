@@ -14,110 +14,6 @@ export type Database = {
   }
   public: {
     Tables: {
-      collections: {
-        Row: {
-          company_id: string
-          created_at: string
-          id: number
-          name: string
-        }
-        Insert: {
-          company_id: string
-          created_at?: string
-          id?: number
-          name: string
-        }
-        Update: {
-          company_id?: string
-          created_at?: string
-          id?: number
-          name?: string
-        }
-        Relationships: [
-          {
-            foreignKeyName: "collections_company_id_fkey"
-            columns: ["company_id"]
-            isOneToOne: false
-            referencedRelation: "companies"
-            referencedColumns: ["id"]
-          },
-        ]
-      }
-      companies: {
-        Row: {
-          address: string
-          contact_number: string
-          created_at: string
-          id: string
-          name: string
-          user_id: string
-        }
-        Insert: {
-          address: string
-          contact_number: string
-          created_at?: string
-          id?: string
-          name: string
-          user_id: string
-        }
-        Update: {
-          address?: string
-          contact_number?: string
-          created_at?: string
-          id?: string
-          name?: string
-          user_id?: string
-        }
-        Relationships: []
-      }
-      delivery_receipts: {
-        Row: {
-          company_id: string
-          created_at: string
-          description: string
-          id: number
-          quantity: number
-          remark: string | null
-          style_id: number
-          unit: string
-        }
-        Insert: {
-          company_id: string
-          created_at?: string
-          description: string
-          id?: number
-          quantity: number
-          remark?: string | null
-          style_id: number
-          unit: string
-        }
-        Update: {
-          company_id?: string
-          created_at?: string
-          description?: string
-          id?: number
-          quantity?: number
-          remark?: string | null
-          style_id?: number
-          unit?: string
-        }
-        Relationships: [
-          {
-            foreignKeyName: "delivery_receipts_company_id_fkey"
-            columns: ["company_id"]
-            isOneToOne: false
-            referencedRelation: "companies"
-            referencedColumns: ["id"]
-          },
-          {
-            foreignKeyName: "delivery_receipts_style_id_fkey"
-            columns: ["style_id"]
-            isOneToOne: false
-            referencedRelation: "styles"
-            referencedColumns: ["id"]
-          },
-        ]
-      }
       profiles: {
         Row: {
           created_at: string
@@ -129,7 +25,7 @@ export type Database = {
         Insert: {
           created_at?: string
           first_name?: string | null
-          id?: string
+          id: string
           last_name?: string | null
           role?: string | null
         }
@@ -141,56 +37,6 @@ export type Database = {
           role?: string | null
         }
         Relationships: []
-      }
-      receipts: {
-        Row: {
-          created_at: string
-          id: string
-          type: string
-          user_id: string
-        }
-        Insert: {
-          created_at?: string
-          id?: string
-          type: string
-          user_id: string
-        }
-        Update: {
-          created_at?: string
-          id?: string
-          type?: string
-          user_id?: string
-        }
-        Relationships: []
-      }
-      styles: {
-        Row: {
-          collection_id: number
-          created_at: string
-          id: number
-          name: string
-        }
-        Insert: {
-          collection_id: number
-          created_at?: string
-          id?: number
-          name: string
-        }
-        Update: {
-          collection_id?: number
-          created_at?: string
-          id?: number
-          name?: string
-        }
-        Relationships: [
-          {
-            foreignKeyName: "styles_collection_id_fkey"
-            columns: ["collection_id"]
-            isOneToOne: false
-            referencedRelation: "collections"
-            referencedColumns: ["id"]
-          },
-        ]
       }
     }
     Views: {

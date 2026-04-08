@@ -1,5 +1,6 @@
 'use client';
 
+import Button from "@/components/ui/Button";
 import InputField from "@/components/ui/InputField";
 import { useSetup } from "@/lib/hooks/useSetup";
 import { useNavigation } from "@/lib/hooks/useNavigation";
@@ -32,7 +33,7 @@ export default function Setup() {
                     <p className="text-secondary text-[1.0rem] font-light">Let&apos;s get to know more about you.</p>
                 </div>
                 <div>
-                    <form method="POST">
+                    <form method="POST" onSubmit={ handleSubmit }>
                         <div className="flex flex-col gap-y-4 w-full">
                             {/* FIRST NAME */}
                             <InputField 
@@ -63,30 +64,7 @@ export default function Setup() {
                         </div>
 
                         {/* SUBMIT */}
-                        <button
-                            onClick={ handleSubmit }
-                            className="
-                                mt-4 
-                                px-6 
-                                py-3 
-                                w-full 
-                                bg-primary-action 
-                                font-semibold 
-                                rounded-md 
-                                shadow-lg 
-                                shadow-primary-action/30 
-                                cursor-pointer 
-                                transition-color 
-                                duration-150 
-                                ease-in-out 
-                                active:translate-y-0 
-                                active:rotate-0 
-                                hover:bg-primary-hover 
-                                hover:shadow-xl
-                            "
-                        >
-                            I&apos;m Ready!
-                        </button>
+                        <Button label="I&apos;m Ready!" type="submit" />
                     </form>
                 </div>
             </div>

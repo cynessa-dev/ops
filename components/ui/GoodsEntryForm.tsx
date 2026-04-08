@@ -4,7 +4,13 @@
 import { forwardRef } from "react";
 import Table, { ColumnConfig } from "@/components/ui/Table";
 
-export default forwardRef<HTMLFormElement, {}>(function GoodsEntryForm(props, ref) {
+type GoodsEntryFormProps = {
+    method: "inbound" | "outbound";
+    onSubmit?: (items: Record<string, unknown>[], method: "inbound" | "outbound") => void;
+    showSubmitButton?: boolean;
+};
+
+export default forwardRef<HTMLFormElement, GoodsEntryFormProps>(function GoodsEntryForm({ method, onSubmit, showSubmitButton = true }, ref) {
     const columns: ColumnConfig[] = [
         {
             key: "goodsName",
@@ -39,9 +45,12 @@ export default forwardRef<HTMLFormElement, {}>(function GoodsEntryForm(props, re
     ];
 
     const handleSubmit = (items: Record<string, unknown>[]) => {
-        console.log("Submitted items:", items);
-        // Add your submission logic here
+        if (onSubmit) {
+            onSubmit(items, method);
+        } else {
+            console.log("Submitted items:", items, "method:", method);
+        }
     };
 
-    return <Table ref={ref} columns={columns} title="Goods Entry Form" onSubmit={handleSubmit} removeMargins={true} showSubmitButton={false} />;
+    return <Table ref={ref} columns={columns} title="Goods Entry Form" onSubmit={handleSubmit} removeMargins={true} showSubmitButton={showSubmitButton} />;
 });

@@ -1,5 +1,6 @@
 'use client';
 
+import { useRef } from "react";
 import Button from "@/components/ui/Button";
 import GoodsEntryForm from "@/components/ui/GoodsEntryForm";
 
@@ -9,6 +10,11 @@ type SlideOverProps = {
 };
 
 export default function SlideOver({ isOpen, onClose }: SlideOverProps) {
+    const formRef = useRef<HTMLFormElement>(null);
+
+    const handleSubmit = () => {
+        formRef.current?.requestSubmit();
+    };
     return (
         <>
             {/* BACKDROP BLUR */}
@@ -46,10 +52,12 @@ export default function SlideOver({ isOpen, onClose }: SlideOverProps) {
                     ${ isOpen ? "translate-x-0" : "translate-x-full" }
                 `}
             >
-                
-                <GoodsEntryForm />
+                <GoodsEntryForm ref={formRef} />
 
-                <Button type="button" label="Cancel" accent="danger" action={ onClose } />
+                <div className="flex gap-4 mt-4">
+                    <Button type="button" label="Cancel" accent="danger" action={ onClose } />
+                    <Button type="button" label="Submit" action={ handleSubmit } />
+                </div>
             </div>
         </>
     );

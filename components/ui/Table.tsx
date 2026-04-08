@@ -1,7 +1,7 @@
 
 'use client';
 
-import { useState } from "react";
+import { forwardRef, useState } from "react";
 
 import Button from "@/components/ui/Button";
 import InputField from "@/components/ui/InputField";
@@ -30,9 +30,10 @@ interface TableProps {
     columns?: ColumnConfig[];
     onSubmit?: (items: TableFormRow[]) => void;
     showSubmitButton?: boolean;
+    removeMargins?: boolean;
 }
 
-export default function Table({ title, icon, headers, rows, columns, onSubmit, showSubmitButton = true }: TableProps) {
+export default forwardRef<HTMLFormElement, TableProps>(function Table({ title, icon, headers, rows, columns, onSubmit, showSubmitButton = true, removeMargins = false }, ref) {
     const isForm = !!columns;
 
     const [items, setItems] = useState<TableFormRow[]>(isForm ? [createEmptyRow()] : []);
@@ -57,7 +58,7 @@ export default function Table({ title, icon, headers, rows, columns, onSubmit, s
 
     function removeItem(index: number) {
         if (items.length > 1) {
-            setItems(items.filter((_, i) => i !== index));
+            setItems(items.filter((_: TableFormRow, i: number) => i !== index));
         }
     }
 
@@ -69,10 +70,10 @@ export default function Table({ title, icon, headers, rows, columns, onSubmit, s
     };
 
     const displayHeaders = isForm ? columns!.map(col => col.label) : headers!;
-    const displayRows = isForm ? items.map(item => columns!.map(col => String(item[col.key]))) : rows!;
+    const displayRows = isForm ? items.map((item: TableFormRow) => columns!.map(col => String(item[col.key]))) : rows!;
 
     return (
-        <section className="mt-12 mx-8">
+        <section className={removeMargins ? "" : "mt-12 mx-8"}>
             { title && (
                 <div className="flex items-center gap-2 mb-4 text-[1.125rem] font-semibold">
                     { icon && (
@@ -85,7 +86,7 @@ export default function Table({ title, icon, headers, rows, columns, onSubmit, s
             ) }
             <div className="border border-border rounded-xl overflow-x-auto ">
                 {isForm ? (
-                    <form onSubmit={ handleSubmit }>
+                    <form onSubmit={ handleSubmit } ref={ref}>
                         <table className="w-full">
                             <thead>
                                 <tr className="text-left uppercase border-b border-border">
@@ -99,7 +100,7 @@ export default function Table({ title, icon, headers, rows, columns, onSubmit, s
                             </thead>
 
                             <tbody>
-                                {items.map((item, index) => (
+                                {items.map((item: TableFormRow, index: number) => (
                                     <tr key={ index } className="border-b border-border">
                                         {columns!.map((col) => (
                                             <td key={`${ index } - ${ col.key }`} className="p-2">
@@ -145,7 +146,6 @@ export default function Table({ title, icon, headers, rows, columns, onSubmit, s
                             <Button type="button" label="+ Add Row" accent="secondary" action={ addItem } />
                         </div>
                         
-                        {showSubmitButton && <Button type="submit" label="Submit" />}
                     </form>
                 ) : (
                     <table className="w-full">
@@ -162,10 +162,10 @@ export default function Table({ title, icon, headers, rows, columns, onSubmit, s
                         </thead>
                         <tbody>
                             {
-                                displayRows.map((row, rowIndex) => (
+                                displayRows.map((row: string[], rowIndex: number) => (
                                     <tr key={rowIndex} className="border-b border-border transition-colors hover:bg-table-hover">
                                         {
-                                            row.map((cell, cellIndex) => (
+                                            row.map((cell: string, cellIndex: number) => (
                                                 <td key={cellIndex} className="px-4 py-3">
                                                     {cell}
                                                 </td>
@@ -177,7 +177,8 @@ export default function Table({ title, icon, headers, rows, columns, onSubmit, s
                         </tbody>
                     </table>
                 )}
+                {isForm && showSubmitButton && <Button type="submit" label="Submit" />}
             </div>
         </section>
     );
-}
+});

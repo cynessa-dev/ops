@@ -1,9 +1,10 @@
 
 'use client';
 
+import { forwardRef } from "react";
 import Table, { ColumnConfig } from "@/components/ui/Table";
 
-export default function GoodsEntryForm() {
+export default forwardRef<HTMLFormElement, {}>(function GoodsEntryForm(props, ref) {
     const columns: ColumnConfig[] = [
         {
             key: "goodsName",
@@ -42,5 +43,5 @@ export default function GoodsEntryForm() {
         // Add your submission logic here
     };
 
-    return <Table columns={columns} title="Goods Entry Form" onSubmit={handleSubmit} />;
-}
+    return <Table ref={ref} columns={columns} title="Goods Entry Form" onSubmit={handleSubmit} removeMargins={true} showSubmitButton={false} />;
+});

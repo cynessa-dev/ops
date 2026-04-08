@@ -35,7 +35,7 @@ export default function Setup() {
                 </div>
                 <div>
                     <form method="POST" onSubmit={ handleSubmit }>
-                        <div className="flex flex-col gap-y-4 w-full">
+                        <div className="flex flex-col gap-y-4 mb-8 w-full">
                             {/* FIRST NAME */}
                             <InputField 
                                 label="First Name" 

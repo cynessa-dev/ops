@@ -1,15 +1,18 @@
 'use client';
 
-import { useRef } from "react";
+import { useRef, useState } from "react";
 import Button from "@/components/ui/Button";
 import GoodsEntryForm from "@/components/ui/GoodsEntryForm";
+import Select from "@/components/ui/Select";
 
 type SlideOverProps = {
     isOpen: boolean;
     onClose: () => void;
+    onSubmit?: (items: Record<string, unknown>[], method: "inbound" | "outbound") => void;
 };
 
-export default function SlideOver({ isOpen, onClose }: SlideOverProps) {
+export default function SlideOver({ isOpen, onClose, onSubmit }: SlideOverProps) {
+    const [method, setMethod] = useState<"inbound" | "outbound">("inbound");
     const formRef = useRef<HTMLFormElement>(null);
 
     const handleSubmit = () => {
@@ -52,7 +55,18 @@ export default function SlideOver({ isOpen, onClose }: SlideOverProps) {
                     ${ isOpen ? "translate-x-0" : "translate-x-full" }
                 `}
             >
-                <GoodsEntryForm ref={formRef} />
+                <div className="mb-4">
+                    <Select 
+                        value={method}
+                        onChange={(value) => setMethod(value as "inbound" | "outbound")}
+                        options={[
+                            { value: "inbound", label: "Inbound" },
+                            { value: "outbound", label: "Outbound" }
+                        ]}
+                    />
+                </div>
+
+                <GoodsEntryForm ref={formRef} method={method} onSubmit={onSubmit} showSubmitButton={false} />
 
                 <div className="flex gap-4 mt-4">
                     <Button type="button" label="Cancel" accent="danger" action={ onClose } />

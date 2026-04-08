@@ -14,19 +14,24 @@ export default function useActionCenter() {
         // Logic for recording outbound goods goes here
     }, []);
 
-    const handleClick = useCallback((method: ActionMethod) => {
+    const handleSubmit = useCallback((items: Record<string, unknown>[], method: ActionMethod) => {
         if (method === "inbound") {
             recordInboundGoods();
         } else {
             recordOutboundGoods();
         }
+        console.log("Submitted:", items, method);
+        // Here you can add logic to save the items
+    }, [recordInboundGoods, recordOutboundGoods]);
 
+    const handleClick = useCallback(() => {
         openSlideOver();
-    }, [openSlideOver, recordInboundGoods, recordOutboundGoods]);
+    }, [openSlideOver]);
 
     return {
         isOpen,
         closeSlideOver,
         handleClick,
+        handleSubmit,
     };
 }

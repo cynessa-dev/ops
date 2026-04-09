@@ -48,7 +48,7 @@ export default function Hero() {
                 <div className={`${styles.heroCta} flex items-center gap-4 mt-1`}>
                     <button
                         onClick={goToSignUp}
-                        className="group flex items-center gap-2 px-6 py-3 bg-primary-action text-white font-semibold rounded-xl shadow-lg hover:bg-primary-hover hover:shadow-xl hover:-translate-y-1 active:translate-y-0 transition-all duration-150 ease-out"
+                        className="group flex items-center gap-2 px-6 py-3 bg-primary-action text-white font-semibold rounded-xl shadow-lg cursor-pointer hover:bg-primary-hover hover:shadow-xl hover:-translate-y-1 active:translate-y-0 transition-all duration-150 ease-out"
                     >
                         Get Started
                         <span className="material-symbols-rounded transition-transform duration-150 group-hover:translate-x-0.5" style={{ fontSize: 18 }}>

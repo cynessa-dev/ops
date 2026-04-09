@@ -1,5 +1,19 @@
 # CHANGELOG
 
+## VERSION 0.2.0 - The Hero Section
+
+LAST COMMIT : *ef163f0554d2b76300d300ef0700f6e47d361069*
+
+Improved the hero section by adding a dynamic background to avoid having a flat surface. Additionally, added a couple of elements for improving UI/UX.
+
+**NEW:**
+
+- New look for the tagline and description of the system.
+- New look for the buttons to convey clarity and softness.
+- Preview of the form submission.
+- Pill Stats for giving statistical data to business people.
+- User Icons for people who trust the system (Just a demo).
+
 ## VERSION 0.1.1 - Clean Up 01
 
 LAST COMMIT: *50a83ef53ab18e8dfd06de3ad5edf7fb2d187877*
